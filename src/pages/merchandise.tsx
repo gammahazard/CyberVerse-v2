@@ -24,28 +24,15 @@ const Merchandise = () => {
   
         <Box sx={styles.contentContainer}>
           <Box sx={styles.headerContainer}>
-            <Typography sx={styles.header}>DePunkz Merchandise</Typography>
-            <Typography sx={styles.subHeader}>Join Waitlist</Typography>
+            <Typography sx={styles.header}>Coming Soon</Typography>
+      
           </Box>
   
-          <Box sx={styles.formContainer}>
-            <TextField
-              variant="outlined"
-              placeholder="Coming soon!"
-              sx={styles.input}
-              
-            />
-            <Button onClick={handleSnackbarOpen} sx={styles.button}>Send</Button>
-          </Box>
+     
         </Box>
   
         <Footer onRoadmapClick={() => {}} />
-        <Snackbar
-        open={openSnackbar}
-        autoHideDuration={6000}
-        onClose={handleSnackbarClose}
-        message="Feature Coming Soon!"
-      />
+       
       </Box>
     );
   };
@@ -62,12 +49,12 @@ const styles = {
       textAlign: 'center',
       paddingTop: '50px',
       paddingBottom: '30px',
-      backgroundColor: '#000',
+      backgroundColor: 'transparent',
     },
   header: {
     color: '##FF00FC',
     fontSize: '60px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 700,
     lineHeight: '78px',
     marginBottom: '20px',
@@ -75,7 +62,7 @@ const styles = {
   subHeader: {
     color: '#ffffff',
     fontSize: '60px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 700,
     lineHeight: '70px',
   },
@@ -84,7 +71,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     padding: '50px',
-    backgroundColor: '#000',
+    backgroundColor: 'transparent',
   },
   input: {
     width: '480px',
@@ -92,7 +79,7 @@ const styles = {
     backgroundColor: '#323232',
     color: '#b8b8b8',
     fontSize: '16px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 500,
     lineHeight: '22px',
     marginRight: '20px',
@@ -106,7 +93,7 @@ const styles = {
     backgroundColor: '#ff3b30',
     color: '#000',
     fontSize: '20px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 700,
     lineHeight: '26px',
   },

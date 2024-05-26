@@ -95,7 +95,7 @@ export default function NeohubSection() {
 </Button>
 <Button
   variant="contained"
-  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
+  onClick={() => window.open('https://docs.cyberversegame.io/cyberverse-litepaper/', '_blank', 'noopener,noreferrer')}
   sx={{
     backgroundColor: '#FF00FC',
     color: '#E1EBFA',

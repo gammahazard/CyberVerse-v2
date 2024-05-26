@@ -15,13 +15,8 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
 
   const handleMobileMenuOpen = () => setMobileMenuOpen(true);
   const handleMobileMenuClose = () => setMobileMenuOpen(false);
-
   const handleRoadmapClick = () => {
-    if (router.pathname !== '/') {
-      router.push('/', '/', { shallow: true }).then(() => onRoadmapClick?.());
-    } else {
-      onRoadmapClick?.();
-    }
+    window.open('https://docs.cyberversegame.io/cyberverseroadmap2024', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -29,7 +24,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
       <Box onClick={() => router.push('/')} style={{ cursor: 'pointer' }}>
         <Image
           src="/logo.png"
-          alt="DePunkz Logo"
+          alt="CyberVerse Logo"
           width={150}
           height={50}
           objectFit="contain"
@@ -39,7 +34,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
   <Box display="flex" alignItems="center" gap={2}>
     <Button
-      onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}
+      onClick={() => window.open('https:/playcyberverse.com', '_blank', 'noopener,noreferrer')}
       className="nav-item"
       sx={{ fontSize: '1.5rem !important' }} // Adjust the font size as needed
     >
@@ -56,7 +51,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
       Roadmap
     </Button>
     <Link href="/overview" passHref>
-      <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>About us</Button>
+      <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Patch Notes</Button>
     </Link>
     <Link href="/merchandise" passHref>
       <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Wiki</Button>
@@ -66,27 +61,27 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
 
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center">
-        <IconButton href="https://twitter.com" target="_blank" rel="noopener noreferrer" size="large">
+        <IconButton href="https://x.com/CyberVerse_io" target="_blank" rel="noopener noreferrer" size="large">
           <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
         </IconButton>
-        <IconButton href="https://discord.gg/FCPeYAUgW" target="_blank" rel="noopener noreferrer" size="large">
+        <IconButton href=" https://discord.com/invite/cyberversegame" target="_blank" rel="noopener noreferrer" size="large">
           <Image src="/discord.svg" alt="Discord" width={24} height={24} />
         </IconButton>
         <Button
   sx={{ fontSize: '1.5rem !important', border: '1px solid #FF00FC' }} // Set font size to 1.5rem with important tag
   variant="outlined"
   className="join-btn"
-  onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}
+  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
 >
   Play Now
 </Button>
       </Box>
 
       <Box display={{ xs: 'flex', md: 'none' }} alignItems="center">
-        <IconButton href="https://twitter.com/depunkzNFT" target="_blank" rel="noopener noreferrer">
+        <IconButton href="https://x.com/CyberVerse_io" target="_blank" rel="noopener noreferrer">
           <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
         </IconButton>
-        <IconButton href="https://discord.gg/FCPeYAUgW" target="_blank" rel="noopener noreferrer">
+        <IconButton href=" https://discord.com/invite/cyberversegame" target="_blank" rel="noopener noreferrer">
           <Image src="/discord.svg" alt="Discord" width={24} height={24} />
         </IconButton>
         <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMobileMenuOpen}>
@@ -113,7 +108,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
                 </Link>
               </ListItem>
             ))}
-            <ListItem button onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')} style={{ justifyContent: 'center', backgroundColor: 'red!important' }}>
+            <ListItem button onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')} style={{ justifyContent: 'center', backgroundColor: 'red!important' }}>
               <Typography variant="body1" className="nav-item" component="div" style={{ textDecoration: 'none' }}>Neohub</Typography>
             </ListItem>
           </List>

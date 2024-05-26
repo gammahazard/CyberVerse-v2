@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import SectionText from '../components/SectionText';
@@ -27,30 +27,91 @@ export default function Home() {
   return (
     <Box>
       <Navbar onRoadmapClick={scrollToRoadmap} />
-      <AnimationComponent />
-      <Box my={4} style={{ marginTop: 0, position: 'relative', width: 'auto', height: 'auto' }}>
-  <img 
-    src="/headerbg.gif" 
-    alt="DePunkz Banner" 
-    style={{ 
-      width:'90%',
-      display:'block',
-
-      height: 'auto', 
-      objectFit: 'cover', 
-      justifyContent:'center',
-      marginInline:'auto',
-     
-    }} 
-  />
-</Box>
+      <Box my={4} style={{ marginTop: 0, position: 'relative', width: '70%', height: 'auto', marginInline: 'auto' }}>
+        <div style={{ position: 'relative' }}>
+          <img 
+            src="/headerbg.gif" 
+            alt="DePunkz Banner" 
+            style={{ 
+              width:'90%',
+              display:'block',
+              height: 'auto', 
+              objectFit: 'cover', 
+              margin: '0 auto',
+            }} 
+          />
+          <Box 
+            style={{ 
+              position: 'absolute', 
+              top: '50%', 
+              left: '50%', 
+              transform: 'translate(-50%, -50%)', 
+              textAlign: 'center', 
+              color: 'white', 
+              width: '90%',  // Increased width to make the box wider
+              maxWidth: '600px', 
+            }}
+          >
+            <h1 style={{ fontSize: '4rem', lineHeight: '1.2', margin: '0 0 20px 0' }}> {/* Increased font size */}
+              Explore the dystopian<br />
+              world of CyberVerse
+            </h1>
+            <p style={{ 
+  fontSize: '1.7rem', 
+  color: 'black', 
+  lineHeight: '1.5', 
+  margin: '0 0 30px 0',
+  textShadow: '2px 2px 2px rgba(255,255,255,0.5)' // Adds a white outline effect
+}}>
+  Explore, play, earn and have fun on Ergo Blockchain!
+</p>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Button
+  variant="contained"
+  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
+  sx={{
+    backgroundColor: '#FF00FC',
+    color: '#E1EBFA',
+    fontSize: '20px',
+    fontFamily: '"pixelFont"',
+    fontWeight: 700,
+    lineHeight: '26px',
+    width: '200px',
+    height: '60px',
+    marginRight: '25px'
+  }}
+>
+Play Now
+</Button>
+<Button
+  variant="outlined"
+  sx={{
+    borderColor: '#FF00FC',
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: '#E1EBFA',
+    fontSize: '20px',
+    fontFamily: '"pixelFont"',
+    fontWeight: 700,
+    lineHeight: '26px',
+    width: '200px', 
+    height: '60px',
+    mb: { xs: 2, md: 0 },
+  }}
+  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
+>
+Join the community
+</Button>
+            </div>
+          </Box>
+        </div>
+      </Box>
       <SectionText />
       <Section2 />
       <div ref={roadmapRef}>
-        <Roadmap />
+   
       </div>
       <NeohubSection />
-      <Faq />
+   
       <Footer onRoadmapClick={scrollToRoadmap} />
     </Box>
   );
