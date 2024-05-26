@@ -20,8 +20,8 @@ const theme = createTheme({
         root: {
           color: 'white',
           borderColor: 'white',
-          borderRadius:0,
-
+          borderRadius:5,
+          backgroundColor: 'rgba(255, 255, 255, 0.5)',
           '&:hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             color: 'white'
