@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Theme>
       <Head>
-        <title>CyberCitizens</title> {/* Optional: Update the title */}
+        <title>CyberVerse</title> {/* Optional: Update the title */}
         <link rel="icon" href="/logo2.png" /> {/* Add the favicon link here */}
       </Head>
       <CustomCursor />
