@@ -30,7 +30,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
         <Image
           src="/logo.png"
           alt="DePunkz Logo"
-          width={50}
+          width={150}
           height={50}
           objectFit="contain"
         />

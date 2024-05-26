@@ -32,7 +32,8 @@ body [data-clickable]:hover {
   cursor: url('/3D_red_precisionselect.cur'), auto;
 }
 .logo {
-    color: #ff2d55;
+    color: #FF00FC;
+
     font-size: 45px;
     font-family: "Source Sans Pro";
     font-weight: 700;
@@ -44,7 +45,7 @@ body [data-clickable]:hover {
     border-color: rgba(27, 2, 2, 0.5); /* Lighter than background color border */
     font-size: 16px;
     font-family: "Source Sans Pro";
-    background-color:#ff2d55;
+    background-color:'#FF00FC'
   }
   .nav-item {
     color: white;
@@ -66,10 +67,10 @@ body [data-clickable]:hover {
     outline: none;
   }
   .join-btn {
-    color: #ff2d55;
+    color: ##FF00FC;
     border-color: rgba(255, 255, 255, 0.5); /* Lighter than background color */
     font-size: 16px;
-    background-color:#ff2d55;
+    background-color:#FF00FC;
     font-weight:bolder;
     font-family: "Source Sans Pro";
   color:black;

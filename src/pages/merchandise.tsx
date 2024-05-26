@@ -65,7 +65,7 @@ const styles = {
       backgroundColor: '#000',
     },
   header: {
-    color: '#ff2d55',
+    color: '##FF00FC',
     fontSize: '60px',
     fontFamily: '"Source Sans Pro"',
     fontWeight: 700,

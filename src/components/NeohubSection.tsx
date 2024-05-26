@@ -19,12 +19,12 @@ export default function NeohubSection() {
         sx={{ 
           width: { xs: '100%', md: '445px' },
           height: { xs: 'auto', md: '446px' },
-          maxWidth: { xs: '345px', md: 'none' },
+          mainidth: { xs: '545px', md: 'none' },
           borderRadius: '8px',
           right:'500px',
           backgroundImage: 'url(/logo.png)',
           backgroundPosition: 'center center',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
       >
@@ -78,9 +78,9 @@ export default function NeohubSection() {
       <Button
   variant="outlined"
   sx={{
-    borderColor: '#ff2d55',
+    borderColor: '##FF00FC',
     backgroundColor: 'rgba(0,0,0,0)',
-    color: '#ff2d55',
+    color: '#FF00FC',
     fontSize: '20px',
     fontFamily: '"Source Sans Pro"',
     fontWeight: 700,
@@ -97,7 +97,7 @@ export default function NeohubSection() {
   variant="contained"
   onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
   sx={{
-    backgroundColor: '#ff2d55',
+    backgroundColor: '#FF00FC',
     color: '#000',
     fontSize: '20px',
     fontFamily: '"Source Sans Pro"',

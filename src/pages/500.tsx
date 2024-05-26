@@ -11,7 +11,7 @@ const Custom500 = () => {
       <Box flex="1" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
         <Typography
           sx={{
-            color: '#ff2d55',
+            color: '##FF00FC',
             fontSize: '96px',
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,

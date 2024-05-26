@@ -12,7 +12,7 @@ const GameLibrary = () => {
         <Box textAlign="center" py={5}>
           <Typography
             sx={{
-              color: '#ff2d55',
+              color: '##FF00FC',
               fontSize: '96px',
               fontFamily: '"Source Sans Pro"',
               fontWeight: 700,
@@ -37,7 +37,7 @@ const GameLibrary = () => {
         <Box display="flex" justifyContent="center" alignItems="center" my={4}>
   <Typography
     sx={{
-      color: '#ff2d55',
+      color: '##FF00FC',
       fontSize: '96px',
       fontFamily: '"Source Sans Pro"',
       fontWeight: 700,

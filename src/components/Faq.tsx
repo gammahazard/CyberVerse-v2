@@ -170,7 +170,7 @@ const styles = {
     alignItems: 'center',
   },
   icon: {
-    color: 'red',
+    color: '#FF00FC',
     width: '40px',
     height: '40px',
   },

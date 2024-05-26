@@ -10,7 +10,7 @@ const Roadmap = () => {
         <Box textAlign="center" py={5}>
           <Typography
             sx={{
-              color: '#ff2d55',
+              color: '##FF00FC',
               fontSize: '96px',
               fontFamily: '"Source Sans Pro"',
               fontWeight: 700,

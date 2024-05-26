@@ -104,7 +104,7 @@ export default function AboutUs() {
                 border: '1px solid #ff3b30',
                 
                 backgroundColor: 'rgba(0,0,0,0)',
-                color: '#ff2d55',
+                color: '##FF00FC',
                 fontSize: '20px',
                 fontFamily: '"Source Sans Pro"',
                 fontWeight: 700,

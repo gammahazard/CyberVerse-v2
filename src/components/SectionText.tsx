@@ -62,7 +62,7 @@ const SectionText = () => {
             variant="contained"
             onClick={handleSnackbarOpen}
             style={{
-              backgroundColor: '#ff2d55',
+              backgroundColor: '#FF00FC',
               color: '#ffffff',
               fontSize: '20px',
               fontWeight: 700,
@@ -79,8 +79,8 @@ const SectionText = () => {
   onClick={() => window.open('https://saturnnft.io/mint/v2/497056e1-3aaf-4488-b627-91afe872397e', '_blank', 'noopener,noreferrer')}
   variant="outlined"
   style={{
-    borderColor: '#ff2d55',
-    color: '#ff2d55',
+    borderColor: '##FF00FC',
+    color: '##FF00FC',
     fontSize: '20px',
     fontWeight: 700,
     lineHeight: '26px',
