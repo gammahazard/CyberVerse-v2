@@ -1,41 +1,35 @@
 import { Box, Typography, Button, Snackbar } from '@mui/material';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const SectionText = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const handleSnackbarOpen = () => {
     setOpenSnackbar(true);
   };
 
-
-
   return (
     <Box 
       display="flex" 
-      flexDirection={isMobile ? 'column' : 'row'} 
+      flexDirection="row" 
       alignItems="center" 
       justifyContent="space-between" 
       fontFamily="pixelFont"
       my={4} 
-      px={isMobile ? 2 : 4}
-      gap={isMobile ? 2 : 4} // Added gap between elements
+      px={4}
+      gap={4}
     >
-      <Box flex={1} p={2} mb={isMobile ? 2 : 0} maxWidth="100%">
+      <Box flex={1} p={2}>
         <Typography 
           variant="h4" 
           gutterBottom 
           align="left"
           style={{
             color: '#E1EBFA',
-            fontSize: isMobile ? '32px' : '60px',
+            fontSize: '60px',
             fontFamily: '"pixelFont"',
             fontWeight: 700,
-            lineHeight: isMobile ? '36px' : '70px',
+            lineHeight: '70px',
           }}
         >
           CyberVerse
@@ -46,7 +40,7 @@ const SectionText = () => {
           align="left"
           style={{
             color: '#E1EBFA',
-            fontSize: isMobile ? '18px' : '22px', // Increased font size
+            fontSize: '22px',
             width: '70%',
             fontFamily: '"pixelFont"',
             lineHeight: '26px',
@@ -55,7 +49,7 @@ const SectionText = () => {
         >
           Cyberverse is a vast open world where you can play, earn and have fun bmlamgleamglreamgrlamgarl
         </Typography>
-        <Box display="flex" gap={2} style={{ maxWidth: '100%' }}>
+        <Box display="flex" gap={2} style={{  }}>
           <Button 
             variant="contained"
             onClick={handleSnackbarOpen}
@@ -65,7 +59,7 @@ const SectionText = () => {
               fontSize: '20px',
               fontWeight: 700,
               lineHeight: '26px',
-              width: '100%', // Adjusted width
+              width: '100%', 
               height: '60px',
               marginRight: '20px',
               outline: 'none',
@@ -83,7 +77,7 @@ const SectionText = () => {
               fontFamily: 'pixelFont',
               fontWeight: 700,
               lineHeight: '26px',
-              width: '100%', // Adjusted width
+              width: '100%', 
               height: '60px',
               outline: 'none',
             }}
@@ -96,20 +90,22 @@ const SectionText = () => {
         flex={1} 
         p={2} 
         style={{
-          display: 'flex',
+          display: 'block',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100%', 
-          width: '100%', 
+          height: '50%', 
+          
+          width: '50%', 
           overflow: 'hidden', 
         }}
       >
         <Box
           style={{
             position: 'relative',
-            paddingBottom: '100%', // 1:1 aspect ratio
-            width: '100%',
-            maxWidth: 'auto', // Max width for larger screens
+           // 1:1 aspect ratio
+            width: '60%',
+            height: '100%',
+            marginLeft:'15%',
             borderRadius: '8px',
             overflow: 'hidden',
           }}
@@ -120,10 +116,9 @@ const SectionText = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
+              position: 'relative',
+           marginTop:'70px',
+              width: '80%',
               height: '100%',
               border: 'none',
             }}
