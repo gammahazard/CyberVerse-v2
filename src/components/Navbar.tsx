@@ -73,7 +73,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
           <Image src="/discord.svg" alt="Discord" width={24} height={24} />
         </IconButton>
         <Button
-  sx={{ fontSize: '1.5rem !important' }} // Set font size to 1.5rem with important tag
+  sx={{ fontSize: '1.5rem !important', border: '1px solid #FF00FC' }} // Set font size to 1.5rem with important tag
   variant="outlined"
   className="join-btn"
   onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}

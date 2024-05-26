@@ -77,7 +77,7 @@ body [data-clickable]:hover {
   }
   .join-btn {
    
-    border-color: '#FF00FC'; /* Lighter than background color */
+    border-color: 'red'; /* Lighter than background color */
     font-size: 16px;
     background-color:'#FF00FC';
     font-weight:bolder;
