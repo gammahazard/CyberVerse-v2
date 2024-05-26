@@ -61,7 +61,7 @@ const Section2 = () => {
                   fontSize: '20px',
                   fontFamily: '"Source Sans Pro"',
                   lineHeight: '26px',
-                  marginTop: '10px',
+              
                   height: '52px'
                 }}
               >

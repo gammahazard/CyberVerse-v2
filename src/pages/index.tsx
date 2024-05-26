@@ -28,8 +28,21 @@ export default function Home() {
     <Box>
       <Navbar onRoadmapClick={scrollToRoadmap} />
       <AnimationComponent />
-      <Box my={4} style={{ marginTop: 0 }}>
-  <img src="/headerbg.gif" alt="DePunkz Banner" style={{ width: '100%', height: 'auto' }} />
+      <Box my={4} style={{ marginTop: 0, position: 'relative', width: '100%', height: '100vh' }}>
+  <img 
+    src="/headerbg.gif" 
+    alt="DePunkz Banner" 
+    style={{ 
+      width:'90%',
+      display:'block',
+
+      height: 'auto', 
+      objectFit: 'cover', 
+      justifyContent:'center',
+      marginInline:'auto',
+     
+    }} 
+  />
 </Box>
       <SectionText />
       <Section2 />
