@@ -127,7 +127,7 @@ const FAQ = () => {
         <Typography sx={styles.text}>What is NEOHUB?</Typography>
         {expanded[6] ? <ArrowCircleUpIcon sx={styles.icon} /> : <ArrowCircleDownIcon sx={styles.icon} />}
       </Box>
-      {expanded[6] && (
+      {expanded[6] && ( 
         <Typography sx={styles.text}><ul>NEOHUB is a gaming platform where players can play games, win prizes, listen to music, swap tokens, and more. DePunkz NFTs are playing a key role in NEOHUBs success to fund the further development after MVP version and holders of DePunkz NFTs will benefit from it.</ul></Typography>
       )}
       <Divider sx={styles.divider} />
