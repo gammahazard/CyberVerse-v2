@@ -66,43 +66,54 @@ export default function Home() {
   Explore, play, earn and have fun on Ergo Blockchain!
 </p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Button
-  variant="contained"
-  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
-  sx={{
-    backgroundColor: '#FF00FC',
-    color: '#E1EBFA',
-    fontSize: '20px',
-    fontFamily: '"pixelFont"',
-    fontWeight: 700,
-    lineHeight: '26px',
-    width: '200px',
-    height: '60px',
-    marginRight: '25px'
-  }}
->
-Play Now
-</Button>
-<Button
-  variant="outlined"
-  sx={{
-    borderColor: '#FF00FC',
-    backgroundColor: 'rgba(0,0,0,0)',
-    color: '#E1EBFA',
-    fontSize: '20px',
-    fontFamily: '"pixelFont"',
-    fontWeight: 700,
-    lineHeight: '26px',
-    width: '200px', 
-    height: '60px',
-    mb: { xs: 2, md: 0 },
-  }}
-  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
->
-Join the community
-</Button>
+              <Button
+                variant="contained"
+                onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
+                sx={{
+                  backgroundColor: '#FF00FC',
+                  color: '#E1EBFA',
+                  fontSize: '20px',
+                  fontFamily: '"pixelFont"',
+                  fontWeight: 700,
+                  lineHeight: '26px',
+                  width: '200px',
+                  height: '60px',
+                  marginRight: '25px'
+                }}
+              >
+                Play Now
+              </Button>
+              <Button
+                variant="outlined"
+                sx={{
+                  borderColor: '#FF00FC',
+                  backgroundColor: 'rgba(0,0,0,0)',
+                  color: '#E1EBFA',
+                  fontSize: '20px',
+                  fontFamily: '"pixelFont"',
+                  fontWeight: 700,
+                  lineHeight: '26px',
+                  width: '200px', 
+                  height: '60px',
+                  outline: 'none',
+                }}
+                onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
+              >
+                Join the community
+              </Button>
             </div>
           </Box>
+          {/* Black overlay */}
+          <Box
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the alpha value (0.5) for the desired darkness
+            }}
+          />
         </div>
       </Box>
       <SectionText />
