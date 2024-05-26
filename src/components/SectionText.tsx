@@ -77,12 +77,13 @@ const SectionText = () => {
             Discover CyberVerse
           </Button>
           <Button 
-  onClick={() => window.open('https://saturnnft.io/mint/v2/497056e1-3aaf-4488-b627-91afe872397e', '_blank', 'noopener,noreferrer')}
+  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
   variant="outlined"
   style={{
     borderColor: '#FF00FC',
     color: '#FF00FC',
     fontSize: '20px',
+   
     fontFamily:'pixelFont',
     fontWeight: 700,
     lineHeight: '26px',
@@ -96,22 +97,33 @@ const SectionText = () => {
         </Box>
       </Box>
       <Box 
-        flex={1} 
-        p={2} 
-        style={{
-          backgroundImage: 'url(/section1.png)',
-          backgroundPosition: 'center center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          borderRadius: '8px',
-          marginRight: '12%',
-        
-          maxHeight: isMobile ? '300px' : '350px',
-          minHeight: isMobile ? '300px' : '350px',
-          maxWidth: isMobile ? '300px' : '300px',
-          minWidth: isMobile ? '300px' : '300px',
-        }}
-      ></Box>
+  flex={1} 
+  p={2} 
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%', // Change height to match width
+    width: '100%', // Add width to ensure square-like appearance
+    overflow: 'hidden',  // Ensures the video is contained within the box
+    marginTop:"40px"
+  }}
+>
+<iframe
+  width="100%"
+  height="100%"
+  src="https://www.youtube.com/embed/SZh_vjE96ZU"
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen  // Add allowfullscreen attribute
+  style={{
+    border: 'none',
+    borderRadius: '8px',
+    maxWidth: '50%',
+    maxHeight: '100%',
+  }}
+></iframe>
+</Box>
 
     </Box>
   );
