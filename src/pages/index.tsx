@@ -28,7 +28,7 @@ export default function Home() {
     <Box>
       <Navbar onRoadmapClick={scrollToRoadmap} />
       <AnimationComponent />
-      <Box my={4} style={{ marginTop: 0, position: 'relative', width: '100%', height: '100vh' }}>
+      <Box my={4} style={{ marginTop: 0, position: 'relative', width: 'auto', height: 'auto' }}>
   <img 
     src="/headerbg.gif" 
     alt="DePunkz Banner" 
