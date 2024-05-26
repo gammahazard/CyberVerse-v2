@@ -27,13 +27,13 @@ export default function Home() {
   return (
     <Box>
       <Navbar onRoadmapClick={scrollToRoadmap} />
-      <Box my={4} style={{ marginTop: 0, position: 'relative', width: '70%', height: 'auto', marginInline: 'auto' }}>
+      <Box my={4} style={{ marginTop: 0, position: 'relative', width: '100%', height: 'auto', marginInline: 'auto' }}>
         <div style={{ position: 'relative' }}>
           <img 
             src="/headerbg.gif" 
             alt="DePunkz Banner" 
             style={{ 
-              width:'90%',
+              width:'100%',
               display:'block',
               height: 'auto', 
               objectFit: 'cover', 
