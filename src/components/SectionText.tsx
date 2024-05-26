@@ -80,7 +80,7 @@ const SectionText = () => {
   variant="outlined"
   style={{
     borderColor: '##FF00FC',
-    color: '##FF00FC',
+    color: '##FF00FC!important',
     fontSize: '20px',
     fontWeight: 700,
     lineHeight: '26px',
