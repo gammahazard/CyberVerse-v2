@@ -79,8 +79,8 @@ const SectionText = () => {
   onClick={() => window.open('https://saturnnft.io/mint/v2/497056e1-3aaf-4488-b627-91afe872397e', '_blank', 'noopener,noreferrer')}
   variant="outlined"
   style={{
-    borderColor: '##FF00FC',
-    color: '##FF00FC!important',
+    borderColor: '#FF00FC',
+    color: '#FF00FC!important',
     fontSize: '20px',
     fontWeight: 700,
     lineHeight: '26px',
