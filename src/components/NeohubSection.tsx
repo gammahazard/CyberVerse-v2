@@ -34,7 +34,7 @@ export default function NeohubSection() {
         <Typography
           variant="h1"
           sx={{
-            color: '#ffffff',
+            color: '#FF0FC',
             fontSize: { xs: '40px', md: '60px' },
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
@@ -78,7 +78,7 @@ export default function NeohubSection() {
       <Button
   variant="outlined"
   sx={{
-    borderColor: '##FF00FC',
+    borderColor: '#FF00FC',
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#FF00FC',
     fontSize: '20px',
@@ -98,7 +98,7 @@ export default function NeohubSection() {
   onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
   sx={{
     backgroundColor: '#FF00FC',
-    color: '#000',
+    color: 'white',
     fontSize: '20px',
     fontFamily: '"Source Sans Pro"',
     fontWeight: 700,
