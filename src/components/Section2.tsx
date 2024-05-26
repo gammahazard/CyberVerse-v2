@@ -8,9 +8,9 @@ const Section2 = () => {
         paragraph 
         align="center"
         style={{
-          color: '#ffffff',
+          color: '#E1EBFA',
           fontSize: '24px',
-          fontFamily: '"Source Sans Pro"',
+          fontFamily: '"pixelFont"',
           lineHeight: '31px',
           marginBottom: '40px',
         }}
@@ -45,9 +45,9 @@ const Section2 = () => {
               <Typography 
                 variant="h6" 
                 style={{
-                  color: '#ffffff',
+                  color: '#E1EBFA',
                   fontSize: '40px',
-                  fontFamily: '"Source Sans Pro"',
+                  fontFamily: '"pixelFont"',
                   fontWeight: 700,
                   lineHeight: '52px',
                 }}
@@ -57,9 +57,9 @@ const Section2 = () => {
               <Typography 
                 variant="body1"
                 style={{
-                  color: '#ffffff',
+                  color: '#E1EBFA',
                   fontSize: '20px',
-                  fontFamily: '"Source Sans Pro"',
+                  fontFamily: '"pixelFont"',
                   lineHeight: '26px',
               
                   height: '52px'

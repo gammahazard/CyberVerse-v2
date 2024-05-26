@@ -138,17 +138,17 @@ const FAQ = () => {
 
 const styles = {
   title: {
-    color: 'white',
+    color: '#E1EBFA',
     fontSize: '42px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 600,
     lineHeight: '52px',
     marginBottom: '20px',
   },
   text: {
-    color: 'white',
+    color: '#E1EBFA',
     fontSize: '20px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     lineHeight: '24px',
   },
   divider: {
@@ -158,7 +158,7 @@ const styles = {
   },
   card: {
     backgroundColor: '#323232',
-    color: 'white',
+    color: '#E1EBFA',
     mb: '20px',
   },
   itemContainer: {
@@ -170,7 +170,7 @@ const styles = {
     alignItems: 'center',
   },
   icon: {
-    color: '#FF00FC',
+    color: '#E1EBFA',
     width: '40px',
     height: '40px',
   },

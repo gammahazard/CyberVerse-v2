@@ -34,9 +34,9 @@ export default function NeohubSection() {
         <Typography
           variant="h1"
           sx={{
-            color: '#FF0FC',
+            color: '#E1EBFA',
             fontSize: { xs: '40px', md: '60px' },
-            fontFamily: '"Source Sans Pro"',
+            fontFamily: '"pixelFont"',
             fontWeight: 700,
             lineHeight: { xs: '45px', md: '70px' },
             mb: 2,
@@ -47,9 +47,9 @@ export default function NeohubSection() {
         <Typography
           variant="body1"
           sx={{
-            color: '#d1d5db',
+            color: '#E1EBFA',
             fontSize: '20px',
-            fontFamily: '"Source Sans Pro"',
+            fontFamily: '"pixelFont"',
             lineHeight: '26px',
           }}
           paragraph
@@ -59,9 +59,9 @@ export default function NeohubSection() {
         <Typography
           variant="body1"
           sx={{
-            color: '#d1d5db',
+            color: '#E1EBFA',
             fontSize: '20px',
-            fontFamily: '"Source Sans Pro"',
+            fontFamily: '"pixelFont"',
             lineHeight: '26px',
             mb: 2,
           }}
@@ -80,9 +80,9 @@ export default function NeohubSection() {
   sx={{
     borderColor: '#FF00FC',
     backgroundColor: 'rgba(0,0,0,0)',
-    color: '#FF00FC',
+    color: '#E1EBFA',
     fontSize: '20px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 700,
     lineHeight: '26px',
     width: '172px', 
@@ -98,9 +98,9 @@ export default function NeohubSection() {
   onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
   sx={{
     backgroundColor: '#FF00FC',
-    color: 'white',
+    color: '#E1EBFA',
     fontSize: '20px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 700,
     lineHeight: '26px',
     width: '200px',

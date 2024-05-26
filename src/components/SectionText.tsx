@@ -24,6 +24,7 @@ const SectionText = () => {
       flexDirection={isMobile ? 'column' : 'row'} 
       alignItems="center" 
       justifyContent="space-between" 
+      fontFamily="pixelFont"
       my={4} 
       px={isMobile ? 2 : 4}
     >
@@ -33,9 +34,9 @@ const SectionText = () => {
           gutterBottom 
           align="left"
           style={{
-            color: '#ffffff',
+            color: '#E1EBFA',
             fontSize: isMobile ? '32px' : '60px',
-            fontFamily: '"Source Sans Pro"',
+            fontFamily: '"pixelFont"',
             fontWeight: 700,
             lineHeight: isMobile ? '36px' : '70px',
           }}
@@ -47,10 +48,10 @@ const SectionText = () => {
           paragraph 
           align="left"
           style={{
-            color: '#ffffff',
+            color: '#E1EBFA',
             fontSize: '20px',
             width:'70%',
-            fontFamily: '"Source Sans Pro"',
+            fontFamily: '"pixelFont"',
             lineHeight: '26px',
             marginBottom: '20px',
           }}
@@ -63,7 +64,7 @@ const SectionText = () => {
             onClick={handleSnackbarOpen}
             style={{
               backgroundColor: '#FF00FC',
-              color: '#ffffff',
+              color: '#E1EBFA',
               fontSize: '20px',
               fontWeight: 700,
               lineHeight: '26px',
@@ -82,6 +83,7 @@ const SectionText = () => {
     borderColor: '#FF00FC',
     color: '#FF00FC',
     fontSize: '20px',
+    fontFamily:'pixelFont',
     fontWeight: 700,
     lineHeight: '26px',
     width: '40%', // Adjusted width

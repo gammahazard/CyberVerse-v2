@@ -57,7 +57,8 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     backgroundColor: '#000C56',
-    color: '#fff',
+    color: '#E1EBFA',
+   
     padding: '20px 40px',
     position: 'relative',
     bottom: 0,
@@ -94,7 +95,7 @@ const styles = {
 
   menuItem: {
     fontSize: '18px',
-    color: '#fff',
+    color: '#E1EBFA',
     cursor: 'pointer',
     textDecoration: 'none',
     '&:hover': {
@@ -106,7 +107,7 @@ const styles = {
     fontSize: '18px',
     fontWeight:0,
    
-    color: '#fff',
+    color: '#E1EBFA',
     cursor: 'pointer',
     textDecoration: 'none',
     '&:hover': {

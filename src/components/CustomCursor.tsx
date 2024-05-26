@@ -56,7 +56,7 @@ const CustomCursor = () => {
         left: `${position.x}px`,
         width: '40px',
         height: '40px',
-        border: clicked ? '1px solid red' : '1px dotted grey',
+        border: clicked ? '1px solid #FF00FC' : '1px dotted #FF00FC',
         borderRadius: '50%',
         transform: 'translate(-50%, -50%)',
         pointerEvents: 'none',

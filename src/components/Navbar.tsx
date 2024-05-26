@@ -73,7 +73,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
           PaperProps={{
             style: {
               backgroundColor: 'black',
-              color: 'white',
+              color: '#E1EBFA',
               width: '250px',
               borderLeft: '1px solid white',
             },

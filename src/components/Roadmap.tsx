@@ -81,24 +81,24 @@ const Roadmap = () => {
 
 const styles = {
   title: {
-    color: 'white',
+    color: '#E1EBFA',
     fontSize: '42px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     fontWeight: 600,
     lineHeight: '52px',
     marginBottom: '20px',
   },
   text: {
-    color: 'white',
+    color: '#E1EBFA',
     fontSize: '20px',
-    fontFamily: '"Source Sans Pro"',
+    fontFamily: '"pixelFont"',
     lineHeight: '24px',
   },
   iconWrapper: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#FF00FC',
+    color: '#E1EBFA',
     backgroundColor: 'black',
     borderRadius: '5px',
     width: '40px',
@@ -111,7 +111,7 @@ const styles = {
   },
   card: {
     backgroundColor: '#323232',
-    color: 'white',
+    color: '#E1EBFA',
     mb: '20px',
   },
   itemContainer: {

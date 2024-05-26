@@ -11,14 +11,17 @@ const theme = createTheme({
       default: '#000C56',
     },
     text: {
-      primary: '#ffffff',
+      primary: '#E1EBFA',
     },
+  },
+  typography: {
+    fontFamily: 'pixelFont, sans-serif',
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          color: 'white',
+          color: '#E1EBFA',
           borderColor: 'white',
           borderRadius:5,
       
@@ -33,7 +36,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          color: 'white',
+          color: '#E1EBFA',
         },
       },
     },
