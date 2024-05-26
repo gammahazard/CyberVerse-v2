@@ -33,12 +33,24 @@ export default function Home() {
             src="/headerbg.gif" 
             alt="DePunkz Banner" 
             style={{ 
-              width:'100%',
-              display:'block',
+              width: '100%',
+              display: 'block',
               height: 'auto', 
               objectFit: 'cover', 
               margin: '0 auto',
             }} 
+          />
+          {/* Black overlay */}
+          <Box
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the alpha value (0.5) for the desired darkness
+              zIndex: 1,
+            }}
           />
           <Box 
             style={{ 
@@ -50,6 +62,7 @@ export default function Home() {
               color: 'white', 
               width: '90%',  // Increased width to make the box wider
               maxWidth: '600px', 
+              zIndex: 2, // Ensure the text is above the overlay
             }}
           >
             <h1 style={{ fontSize: '4rem', lineHeight: '1.2', margin: '0 0 20px 0' }}> {/* Increased font size */}
@@ -57,14 +70,14 @@ export default function Home() {
               world of CyberVerse
             </h1>
             <p style={{ 
-  fontSize: '1.7rem', 
-  color: 'black', 
-  lineHeight: '1.5', 
-  margin: '0 0 30px 0',
-  textShadow: '2px 2px 2px rgba(255,255,255,0.5)' // Adds a white outline effect
-}}>
-  Explore, play, earn and have fun on Ergo Blockchain!
-</p>
+              fontSize: '1.7rem', 
+              color: 'black', 
+              lineHeight: '1.5', 
+              margin: '0 0 30px 0',
+              textShadow: '2px 2px 2px rgba(255,255,255,0.5)' // Adds a white outline effect
+            }}>
+              Explore, play, earn and have fun on Ergo Blockchain!
+            </p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <Button
                 variant="contained"
@@ -103,21 +116,10 @@ export default function Home() {
               </Button>
             </div>
           </Box>
-          {/* Black overlay */}
-          <Box
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the alpha value (0.5) for the desired darkness
-            }}
-          />
         </div>
       </Box>
       <SectionText />
-      <Section2 />
+
       <div ref={roadmapRef}>
    
       </div>

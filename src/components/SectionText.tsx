@@ -1,7 +1,8 @@
 import { Box, Typography, Button, Snackbar } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+
 const SectionText = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -11,7 +12,7 @@ const SectionText = () => {
     setOpenSnackbar(true);
   };
 
-  const handleSnackbarClose = (event : any, reason : any) => {
+  const handleSnackbarClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
     }
@@ -27,6 +28,7 @@ const SectionText = () => {
       fontFamily="pixelFont"
       my={4} 
       px={isMobile ? 2 : 4}
+      gap={isMobile ? 2 : 4} // Added gap between elements
     >
       <Box flex={1} p={2} mb={isMobile ? 2 : 0} maxWidth="100%">
         <Typography 
@@ -49,8 +51,8 @@ const SectionText = () => {
           align="left"
           style={{
             color: '#E1EBFA',
-            fontSize: '20px',
-            width:'70%',
+            fontSize: isMobile ? '18px' : '22px', // Increased font size
+            width: '70%',
             fontFamily: '"pixelFont"',
             lineHeight: '26px',
             marginBottom: '20px',
@@ -58,7 +60,7 @@ const SectionText = () => {
         >
           Cyberverse is a vast open world where you can play, earn and have fun bmlamgleamglreamgrlamgarl
         </Typography>
-        <Box display="flex" gap={2} style={{maxWidth: '80%'}}>
+        <Box display="flex" gap={2} style={{ maxWidth: '100%' }}>
           <Button 
             variant="contained"
             onClick={handleSnackbarOpen}
@@ -68,7 +70,7 @@ const SectionText = () => {
               fontSize: '20px',
               fontWeight: 700,
               lineHeight: '26px',
-              width: '60%', // Adjusted width
+              width: '100%', // Adjusted width
               height: '60px',
               marginRight: '20px',
               outline: 'none',
@@ -77,54 +79,62 @@ const SectionText = () => {
             Discover CyberVerse
           </Button>
           <Button 
-  onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
-  variant="outlined"
-  style={{
-    borderColor: '#FF00FC',
-    color: '#FF00FC',
-    fontSize: '20px',
-   
-    fontFamily:'pixelFont',
-    fontWeight: 700,
-    lineHeight: '26px',
-    width: '40%', // Adjusted width
-    height: '60px',
-    outline: 'none',
-  }}
->
-  Buy on Secondary Marketplace
-</Button>
+            onClick={() => window.open('https://skyharbor.io', '_blank', 'noopener,noreferrer')}
+            variant="outlined"
+            style={{
+              borderColor: '#FF00FC',
+              color: '#FF00FC',
+              fontSize: '20px',
+              fontFamily: 'pixelFont',
+              fontWeight: 700,
+              lineHeight: '26px',
+              width: '100%', // Adjusted width
+              height: '60px',
+              outline: 'none',
+            }}
+          >
+            Marketplace
+          </Button>
         </Box>
       </Box>
       <Box 
-  flex={1} 
-  p={2} 
-  style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%', // Change height to match width
-    width: '100%', // Add width to ensure square-like appearance
-    overflow: 'hidden',  // Ensures the video is contained within the box
-    marginTop:"40px"
-  }}
->
-<iframe
-  width="100%"
-  height="100%"
-  src="https://www.youtube.com/embed/SZh_vjE96ZU"
-  title="YouTube video player"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen  // Add allowfullscreen attribute
-  style={{
-    border: 'none',
-    borderRadius: '8px',
-    maxWidth: '50%',
-    maxHeight: '100%',
-  }}
-></iframe>
-</Box>
-
+        flex={1} 
+        p={2} 
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%', 
+          width: '100%', 
+          overflow: 'hidden', 
+        }}
+      >
+        <Box
+          style={{
+            position: 'relative',
+            paddingBottom: '100%', // 1:1 aspect ratio
+            width: '100%',
+            maxWidth: 'auto', // Max width for larger screens
+            borderRadius: '8px',
+            overflow: 'hidden',
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/SZh_vjE96ZU"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              border: 'none',
+            }}
+          ></iframe>
+        </Box>
+      </Box>
     </Box>
   );
 };
