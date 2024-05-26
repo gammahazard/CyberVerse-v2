@@ -22,7 +22,7 @@ export default function NeohubSection() {
           mainidth: { xs: '545px', md: 'none' },
           borderRadius: '8px',
           right:'500px',
-          backgroundImage: 'url(/logo.png)',
+          backgroundImage: 'url(/logo2.png)',
           backgroundPosition: 'center center',
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
