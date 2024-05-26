@@ -73,7 +73,7 @@ const styles = {
     marginBottom: '20px',
   },
   subHeader: {
-    color: '#000000',
+    color: '#ffffff',
     fontSize: '60px',
     fontFamily: '"Source Sans Pro"',
     fontWeight: 700,

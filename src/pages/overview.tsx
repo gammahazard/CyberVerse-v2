@@ -10,7 +10,7 @@ export default function AboutUs() {
       <Box mt={4} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
         <Typography
           sx={{
-            color: '#000000',
+            color: '#ffffff',
             fontSize: '60px',
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
@@ -40,7 +40,7 @@ export default function AboutUs() {
     <Typography
       variant="h6"
       sx={{
-        color: '#000000',
+        color: '#ffffff',
         fontWeight: 'bold',
         fontSize: '20px',
         fontFamily: '"Source Sans Pro"',
@@ -55,7 +55,7 @@ export default function AboutUs() {
     <Typography
       variant="body1"
       sx={{
-        color: '#000000',
+        color: '#ffffff',
         fontSize: '18px',
         fontFamily: '"Source Sans Pro"',
         lineHeight: '24px',
@@ -73,7 +73,7 @@ export default function AboutUs() {
       <Box mt={4} mb={8} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
         <Typography
           sx={{
-            color: '#000000',
+            color: '#ffffff',
             fontSize: '60px',
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
@@ -146,7 +146,7 @@ export default function AboutUs() {
               >
                 <Typography
                   sx={{
-                    color: '#000000',
+                    color: '#ffffff',
                     fontSize: '32px',
                     fontFamily: '"Source Sans Pro"',
                     fontWeight: 700,

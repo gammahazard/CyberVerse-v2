@@ -33,7 +33,7 @@ const SectionText = () => {
           gutterBottom 
           align="left"
           style={{
-            color: '#000000',
+            color: '#ffffff',
             fontSize: isMobile ? '32px' : '60px',
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
@@ -47,7 +47,7 @@ const SectionText = () => {
           paragraph 
           align="left"
           style={{
-            color: '#000000',
+            color: '#ffffff',
             fontSize: '20px',
             width:'70%',
             fontFamily: '"Source Sans Pro"',
@@ -63,7 +63,7 @@ const SectionText = () => {
             onClick={handleSnackbarOpen}
             style={{
               backgroundColor: '#ff2d55',
-              color: '#000000',
+              color: '#ffffff',
               fontSize: '20px',
               fontWeight: 700,
               lineHeight: '26px',

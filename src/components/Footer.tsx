@@ -56,7 +56,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    backgroundColor: '#000',
+    backgroundColor: '#000C56',
     color: '#fff',
     padding: '20px 40px',
     position: 'relative',

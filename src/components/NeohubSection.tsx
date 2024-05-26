@@ -34,7 +34,7 @@ export default function NeohubSection() {
         <Typography
           variant="h1"
           sx={{
-            color: '#000000',
+            color: '#ffffff',
             fontSize: { xs: '40px', md: '60px' },
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,

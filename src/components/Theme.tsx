@@ -8,10 +8,10 @@ import AnimationComponent from './AnimationComponent';
 const theme = createTheme({
   palette: {
     background: {
-      default: 'pink',
+      default: '#000C56',
     },
     text: {
-      primary: '#000000',
+      primary: '#ffffff',
     },
   },
   components: {

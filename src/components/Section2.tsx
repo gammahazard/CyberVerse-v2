@@ -2,13 +2,13 @@ import { Box, Typography, Grid } from '@mui/material';
 
 const Section2 = () => {
   return (
-    <Box py={8} px={2} style={{ backgroundColor: 'pink', color: '#fff' }}>
+    <Box py={8} px={2} style={{ backgroundColor: '#000C56', color: '#fff' }}>
       <Typography 
         variant="h5" 
         paragraph 
         align="center"
         style={{
-          color: '#000000',
+          color: '#ffffff',
           fontSize: '24px',
           fontFamily: '"Source Sans Pro"',
           lineHeight: '31px',
@@ -45,7 +45,7 @@ const Section2 = () => {
               <Typography 
                 variant="h6" 
                 style={{
-                  color: '#000000',
+                  color: '#ffffff',
                   fontSize: '40px',
                   fontFamily: '"Source Sans Pro"',
                   fontWeight: 700,
@@ -57,7 +57,7 @@ const Section2 = () => {
               <Typography 
                 variant="body1"
                 style={{
-                  color: '#000000',
+                  color: '#ffffff',
                   fontSize: '20px',
                   fontFamily: '"Source Sans Pro"',
                   lineHeight: '26px',

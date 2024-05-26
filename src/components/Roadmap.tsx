@@ -81,7 +81,7 @@ const Roadmap = () => {
 
 const styles = {
   title: {
-    color: 'black',
+    color: 'white',
     fontSize: '42px',
     fontFamily: '"Source Sans Pro"',
     fontWeight: 600,
@@ -89,7 +89,7 @@ const styles = {
     marginBottom: '20px',
   },
   text: {
-    color: 'black',
+    color: 'white',
     fontSize: '20px',
     fontFamily: '"Source Sans Pro"',
     lineHeight: '24px',
