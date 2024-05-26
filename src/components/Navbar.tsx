@@ -37,14 +37,33 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
       </Box>
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
-        <Box display="flex" alignItems="center" gap={2}>
-          <Button onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')} className="nav-item">Litepaper</Button>
-          <Link href="/series" passHref><Button className="nav-item">Series</Button></Link>
-          <Button className="nav-item" onClick={handleRoadmapClick}>Roadmap</Button>
-          <Link href="/overview" passHref><Button className="nav-item">About us</Button></Link>
-          <Link href="/merchandise" passHref><Button className="nav-item">Merchandise</Button></Link>
-        </Box>
-      </Box>
+  <Box display="flex" alignItems="center" gap={2}>
+    <Button
+      onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}
+      className="nav-item"
+      sx={{ fontSize: '1.5rem !important' }} // Adjust the font size as needed
+    >
+      Litepaper
+    </Button>
+    <Link href="/series" passHref>
+      <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Tutorial</Button>
+    </Link>
+    <Button
+      className="nav-item"
+      onClick={handleRoadmapClick}
+      sx={{ fontSize: '1.5rem !important' }} // Adjust the font size as needed
+    >
+      Roadmap
+    </Button>
+    <Link href="/overview" passHref>
+      <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>About us</Button>
+    </Link>
+    <Link href="/merchandise" passHref>
+      <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Wiki</Button>
+    </Link>
+  </Box>
+</Box>
+
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center">
         <IconButton href="https://twitter.com" target="_blank" rel="noopener noreferrer" size="large">
@@ -53,7 +72,14 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
         <IconButton href="https://discord.gg/FCPeYAUgW" target="_blank" rel="noopener noreferrer" size="large">
           <Image src="/discord.svg" alt="Discord" width={24} height={24} />
         </IconButton>
-        <Button variant="outlined" className="join-btn" onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}>Play</Button>
+        <Button
+  sx={{ fontSize: '1.5rem !important' }} // Set font size to 1.5rem with important tag
+  variant="outlined"
+  className="join-btn"
+  onClick={() => window.open('https://app.depunkz.io', '_blank', 'noopener,noreferrer')}
+>
+  Play Now
+</Button>
       </Box>
 
       <Box display={{ xs: 'flex', md: 'none' }} alignItems="center">
