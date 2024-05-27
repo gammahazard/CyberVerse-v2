@@ -111,7 +111,7 @@ const Series = () => {
         ))}
       </Box>
 
-      <Footer onRoadmapClick={() => {}} />
+       <Footer />
     </Box>
   );
 };

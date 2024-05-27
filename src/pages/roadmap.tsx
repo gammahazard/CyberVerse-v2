@@ -32,7 +32,7 @@ const Roadmap = () => {
           </Typography>
         </Box>
       </Box>
-      <Footer onRoadmapClick={() => {}} />
+       <Footer />
     </Box>
   );
 };

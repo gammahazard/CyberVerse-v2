@@ -52,7 +52,7 @@ const GameLibrary = () => {
 
       </Box>
 
-      <Footer onRoadmapClick={() => {}} />
+       <Footer />
     </Box>
   );
 };

@@ -18,7 +18,7 @@ const Wiki = () => {
           style={{ width: '100%', height: '100%', border: 'none' }}
         ></iframe>
       </Box>
-      <Footer onRoadmapClick={() => {}} />
+       <Footer />
     </Box>
   );
 };

@@ -32,7 +32,7 @@ const Team = () => {
           </Typography>
         </Box>
       </Box>      
-      <Footer onRoadmapClick={() => {}} />
+       <Footer />
     </Box>
   );
 };
