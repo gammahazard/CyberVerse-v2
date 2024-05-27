@@ -16,7 +16,7 @@ const DiscoverWorldCyberverse = () => {
   height={533}
   style={{ borderRadius: '8px', marginBottom: '20px' }}
 />
-      <div className="article-container" sx={{ position: 'relative', maxWidth: '800px', margin: '0 auto', padding: '20px', backgroundColor: '#1a1a1a', color: '#ffffff', borderRadius: '8px' }}>
+      <div className="article-container" style={{ position: 'relative', maxWidth: '800px', margin: '0 auto', padding: '20px', backgroundColor: '#1a1a1a', color: '#ffffff', borderRadius: '8px' }}>
         <Link href="/patch" passHref>
           <Button
             variant="outlined"
