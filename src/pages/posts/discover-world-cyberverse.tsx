@@ -1,0 +1,81 @@
+import { Box, Typography, Button } from '@mui/material';
+import Image from 'next/image';
+import Link from 'next/link';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
+const DiscoverWorldCyberverse = () => {
+  return (
+    <Box sx={{ textAlign: 'center' }}>
+      <Typography variant="h1" sx={{ marginBottom: '20px' }}>Discover the World of CyberVerse</Typography>
+      <Image
+        src="https://static.wikia.nocookie.net/cyberverse/images/a/af/Minttank.png/revision/latest/scale-to-width-down/185?cb=20240225081927"
+        alt="Discover the World of CyberVerse"
+        width={800}
+        height={533}
+        sx={{ borderRadius: '8px', marginBottom: '20px' }}
+      />
+      <div className="article-container" sx={{ position: 'relative', maxWidth: '800px', margin: '0 auto', padding: '20px', backgroundColor: '#1a1a1a', color: '#ffffff', borderRadius: '8px' }}>
+        <Link href="/patch" passHref>
+          <Button
+            variant="outlined"
+            style={{
+              position: 'absolute',
+              top: '20px',
+              left: '20px',
+              borderColor: '#FF00FC',
+              color: '#FF00FC',
+              fontSize: '20px',
+              fontFamily: 'pixelFont',
+              fontWeight: 700,
+              lineHeight: '26px',
+              width: '40px',
+              height: '40px',
+              padding: '0',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textDecoration: 'none',
+            }}
+          >
+            <ArrowBackIcon />
+          </Button>
+        </Link>
+        <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Introduction</Typography>
+        <Typography variant="body1">
+          CyberVerse is a vast and immersive world built on the Ergo Blockchain. Explore the possibilities and start
+          your adventure today! In this post, we delve into the features, gameplay mechanics, and the vibrant community
+          that makes CyberVerse a unique gaming experience.
+        </Typography>
+
+        <Typography variant="h3" sx={{ color: '#03a9f4', margin: '20px 0' }}>Features</Typography>
+        <Typography variant="body1">
+          CyberVerse offers a range of exciting features including:
+        </Typography>
+        <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
+          <li>Blockchain Integration</li>
+          <li>NFT-powered Gameplay</li>
+          <li>Dynamic In-Game Economy</li>
+          <li>Extensive Real Estate Options</li>
+          <li>Immersive Job System</li>
+          <li>Exclusive Club Access</li>
+        </Box>
+
+        <Typography variant="h3" sx={{ color: '#03a9f4', margin: '20px 0' }}>Getting Started</Typography>
+        <Typography variant="body1">
+          To get started in CyberVerse, follow these steps:
+        </Typography>
+        <Box component="ol" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
+          <li>Download the wallet</li>
+          <li>Set up your wallet</li>
+          <li>Mint a CyberCitizen NFT</li>
+          <li>Connect and play</li>
+        </Box>
+
+        <Typography variant="body1" sx={{ marginTop: '20px' }}>Embark on your journey in CyberVerse today!</Typography>
+      </div>
+    </Box>
+  );
+};
+
+export default DiscoverWorldCyberverse;

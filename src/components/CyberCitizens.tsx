@@ -30,7 +30,7 @@ const SectionText = () => {
             fontWeight: 700,
           }}
         >
-          CYBERVERSE
+          CYBERCITIZENS
         </Typography>
         <Typography 
           variant="body1" 

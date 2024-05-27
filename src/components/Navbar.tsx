@@ -50,10 +50,10 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
     >
       Roadmap
     </Button>
-    <Link href="/overview" passHref>
+    <Link href="/patch" passHref>
       <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Patch Notes</Button>
     </Link>
-    <Link href="/merchandise" passHref>
+    <Link href="/wiki" passHref>
       <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Wiki</Button>
     </Link>
   </Box>

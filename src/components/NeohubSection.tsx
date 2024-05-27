@@ -42,7 +42,7 @@ export default function NeohubSection() {
             mb: 2,
           }}
         >
-          CyberVerse
+          Find out more
         </Typography>
         <Typography
           variant="body1"

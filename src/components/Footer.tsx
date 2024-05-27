@@ -2,9 +2,7 @@ import { Box, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
-interface FooterProps {
-  onRoadmapClick: () => void; // Assuming onRoadmapClick is a function with no arguments
-}
+
 const Footer: React.FC<FooterProps> = ({ onRoadmapClick }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -13,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ onRoadmapClick }) => {
     <Box sx={{ ...styles.container, ...(isMobile && styles.mobileContainer) }}>
       <Box>
         <Typography sx={styles.title}>Connect with Us</Typography>
-        <Typography sx={styles.subtitle}>Explore the world of DePunkz NFTs.</Typography>
+        <Typography sx={styles.subtitle}>Explore the vibrant world of CyberVerse</Typography>
       </Box>
 
       <Box sx={styles.linksContainer}>
@@ -22,27 +20,19 @@ const Footer: React.FC<FooterProps> = ({ onRoadmapClick }) => {
         </Box>
 
         <Box sx={styles.menuItemBox}>
-          <Link href="/series" passHref>
+          <Link href="/wiki" passHref>
             <Typography component="a" sx={styles.menuItem}>
-              Series
+              Wiki
             </Typography>
           </Link>
         </Box>
 
-        <Box sx={styles.menuItemBox}>
-          <Typography
-            sx={styles.menuItemWithWeight}
-            onClick={onRoadmapClick}
-            style={{ cursor: 'pointer' }}
-          >
-            Roadmap
-          </Typography>
-        </Box>
+  
 
         <Box sx={styles.menuItemBox}>
-          <Link href="/overview" passHref>
+          <Link href="/patch" passHref>
             <Typography component="p" sx={styles.menuItem}>
-              About us
+             Patch Notes
             </Typography>
           </Link>
         </Box>

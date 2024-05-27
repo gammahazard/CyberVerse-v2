@@ -2,16 +2,18 @@ import { Box, Button } from '@mui/material';
 import { useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import SectionText from '../components/SectionText';
-import Section2 from '../components/Section2';
+import CyberCitizens from '../components/CyberCitizens';
+import Features from '../components/Features';
 import Roadmap from '../components/Roadmap';
 import Faq from '../components/Faq';
+import News from '../components/News';
 import AnimationComponent from '../components/AnimationComponent';
 import NeohubSection from '../components/NeohubSection';
 import Footer from '../components/Footer';
 import { useRouter } from 'next/router';
 
 export default function Home() {
-  const roadmapRef = useRef<HTMLDivElement>(null);  // Specify the type here
+  const roadmapRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const scrollToRoadmap = () => {
@@ -40,7 +42,6 @@ export default function Home() {
               margin: '0 auto',
             }} 
           />
-          {/* Black overlay */}
           <Box
             style={{
               position: 'absolute',
@@ -48,7 +49,7 @@ export default function Home() {
               left: 0,
               width: '100%',
               height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the alpha value (0.5) for the desired darkness
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
               zIndex: 1,
             }}
           />
@@ -60,12 +61,12 @@ export default function Home() {
               transform: 'translate(-50%, -50%)', 
               textAlign: 'center', 
               color: 'white', 
-              width: '90%',  // Increased width to make the box wider
+              width: '90%', 
               maxWidth: '600px', 
-              zIndex: 2, // Ensure the text is above the overlay
+              zIndex: 2, 
             }}
           >
-            <h1 style={{ fontSize: '4rem', lineHeight: '1.2', margin: '0 0 20px 0' }}> {/* Increased font size */}
+            <h1 style={{ fontSize: '3rem', lineHeight: '1.2', margin: '0 0 20px 0' }}> {/* Adjusted font size */}
               Explore the dystopian<br />
               world of CyberVerse
             </h1>
@@ -74,7 +75,7 @@ export default function Home() {
               color: 'black', 
               lineHeight: '1.5', 
               margin: '0 0 30px 0',
-              textShadow: '2px 2px 2px rgba(255,255,255,0.5)' // Adds a white outline effect
+              textShadow: '2px 2px 2px rgba(255,255,255,0.5)'
             }}>
               Explore, play, earn and have fun on Ergo Blockchain!
             </p>
@@ -119,7 +120,9 @@ export default function Home() {
         </div>
       </Box>
       <SectionText />
-
+      <Features />
+      <CyberCitizens />
+      <News />
       <div ref={roadmapRef}>
    
       </div>
