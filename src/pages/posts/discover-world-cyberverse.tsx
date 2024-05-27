@@ -1,3 +1,5 @@
+
+// @ts-ignore
 import { Box, Typography, Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,14 +8,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 const DiscoverWorldCyberverse = () => {
   return (
     <Box sx={{ textAlign: 'center' }}>
-      <Typography variant="h1" sx={{ marginBottom: '20px' }}>Discover the World of CyberVerse</Typography>
-      <Image
-        src="https://static.wikia.nocookie.net/cyberverse/images/a/af/Minttank.png/revision/latest/scale-to-width-down/185?cb=20240225081927"
-        alt="Discover the World of CyberVerse"
-        width={800}
-        height={533}
-        sx={{ borderRadius: '8px', marginBottom: '20px' }}
-      />
+ <Typography variant="h1" sx={{ marginBottom: '20px' }}>Discover the World of CyberVerse</Typography>
+<Image
+  src="https://static.wikia.nocookie.net/cyberverse/images/a/af/Minttank.png/revision/latest/scale-to-width-down/185?cb=20240225081927"
+  alt="Discover the World of CyberVerse"
+  width={800}
+  height={533}
+  style={{ borderRadius: '8px', marginBottom: '20px' }}
+/>
       <div className="article-container" sx={{ position: 'relative', maxWidth: '800px', margin: '0 auto', padding: '20px', backgroundColor: '#1a1a1a', color: '#ffffff', borderRadius: '8px' }}>
         <Link href="/patch" passHref>
           <Button
