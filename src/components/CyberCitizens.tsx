@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Snackbar } from '@mui/material';
+import { Box, Typography, Button, Grid } from '@mui/material';
 import { useState } from 'react';
 
 const SectionText = () => {
@@ -48,7 +48,7 @@ const SectionText = () => {
         <Box display="flex" gap={2}>
             <Button 
             variant="contained"
-            onClick={handleSnackbarOpen}
+            onClick={() => window.open('https://www.skyharbor.io/collection/cybercitizens', '_blank', 'noopener,noreferrer')}
             style={{
               backgroundColor: '#FF00FC',
               color: '#E1EBFA',
@@ -61,10 +61,10 @@ const SectionText = () => {
               outline: 'none',
             }}
           >
-            Discover CyberVerse
+          GEN 2
           </Button>
           <Button 
-            onClick={() => window.open('https://skyharbor.io', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://www.skyharbor.io/collection/cybercitizensgen3', '_blank', 'noopener,noreferrer')}
             variant="outlined"
             style={{
               borderColor: '#FF00FC',
@@ -78,42 +78,52 @@ const SectionText = () => {
               outline: 'none',
             }}
           >
-            Marketplace
+        GEN 3
           </Button>
         </Box>
       </Box>
-      <Box 
-        flex={1} 
-        p={2} 
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Box
-          style={{
-            position: 'relative',
-            paddingTop: '56.25%', // 16:9 aspect ratio
-            width: '100%',
-            borderRadius: '8px',
-            overflow: 'hidden',
-          }}
-        >
-          <iframe
-            src="https://www.youtube.com/embed/SZh_vjE96ZU"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+      <Grid container spacing={4} flex={1} p={2}>
+        <Grid item xs={12} md={6}>
+          <Box
             style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
               width: '100%',
               height: '100%',
-              border: 'none',
+              borderRadius: '8px',
+              overflow: 'hidden',
             }}
-          ></iframe>
-        </Box>
-      </Box>
+          >
+            <img
+              src="/gen2.png" // Path to your image in the public folder
+              alt="GEN 2"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '8px',
+              overflow: 'hidden',
+            }}
+          >
+            <img
+              src="/gen3.png" // Path to your image in the public folder
+              alt="GEN 3"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

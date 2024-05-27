@@ -36,7 +36,7 @@ const Features = () => {
           }}
         >
           <img
-            src="/filler.jpg" // Path to your image in the public folder
+            src="/hero-image.png" // Path to your image in the public folder
             alt="Filler"
             style={{
               position: 'absolute',
@@ -76,23 +76,7 @@ const Features = () => {
           Cyberverse is a vast open world where you can play, earn and have fun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia purus non velit ultrices, id vulputate eros pellentesque. Suspendisse potenti. Nulla facilisi. Integer non pulvinar tortor, id laoreet orci. Aenean malesuada velit in lectus convallis, id varius nulla eleifend. Donec ac lectus vitae libero aliquet dapibus. Curabitur tempus sollicitudin risus nec venenatis. Cras hendrerit metus id nisl faucibus, non dictum turpis laoreet. Quisque convallis, erat vel scelerisque viverra, mi eros vehicula libero, id varius eros velit ut nisl. Morbi tempus massa at lacus pharetra scelerisque. Ut sed semper ipsum, in viverra ligula. Donec facilisis orci non diam fringilla, nec luctus elit ullamcorper. Mauris nec magna vitae orci malesuada tristique. Nam sit amet orci lacus. Nam et turpis eu orci tristique viverra. Sed sit amet ipsum magna.
         </Typography>
         <Box display="flex" gap={2}>
-          <Button 
-            variant="contained"
-            onClick={handleSnackbarOpen}
-            style={{
-              backgroundColor: '#FF00FC',
-              color: '#E1EBFA',
-              fontSize: '20px',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '100%', 
-              height: '60px',
-              marginRight: '20px',
-              outline: 'none',
-            }}
-          >
-            Discover CyberVerse
-          </Button>
+
           <Button 
             onClick={() => window.open('https://skyharbor.io', '_blank', 'noopener,noreferrer')}
             variant="outlined"
@@ -108,7 +92,7 @@ const Features = () => {
               outline: 'none',
             }}
           >
-            Marketplace
+           Learn More
           </Button>
         </Box>
       </Box>
