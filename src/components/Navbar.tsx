@@ -117,7 +117,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
             </ListItem>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
               <Button
-                onClick={() => window.open('https:/playcyberverse.com', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://docs.cyberversegame.io/whitepaper-v3', '_blank', 'noopener,noreferrer')}
                 className="nav-item"
      
               >
