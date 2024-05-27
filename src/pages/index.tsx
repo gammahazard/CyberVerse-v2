@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import SectionText from '../components/SectionText';
@@ -11,10 +11,12 @@ import AnimationComponent from '../components/AnimationComponent';
 import NeohubSection from '../components/NeohubSection';
 import Footer from '../components/Footer';
 import { useRouter } from 'next/router';
+import { useTheme } from '@mui/material/styles';
 
 export default function Home() {
   const roadmapRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const theme = useTheme();
 
   const scrollToRoadmap = () => {
     roadmapRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -29,8 +31,8 @@ export default function Home() {
   return (
     <Box>
       <Navbar onRoadmapClick={scrollToRoadmap} />
-      <Box my={4} style={{ marginTop: 0, position: 'relative', width: '100%', height: 'auto', marginInline: 'auto' }}>
-        <div style={{ position: 'relative' }}>
+      <Box my={4} sx={{ marginTop: 0, position: 'relative', width: '100%', height: 'auto', marginInline: 'auto' }}>
+        <Box sx={{ position: 'relative' }}>
           <img 
             src="/headerbg.gif" 
             alt="DePunkz Banner" 
@@ -43,7 +45,7 @@ export default function Home() {
             }} 
           />
           <Box
-            style={{
+            sx={{
               position: 'absolute',
               top: 0,
               left: 0,
@@ -54,7 +56,7 @@ export default function Home() {
             }}
           />
           <Box 
-            style={{ 
+            sx={{ 
               position: 'absolute', 
               top: '50%', 
               left: '50%', 
@@ -66,20 +68,30 @@ export default function Home() {
               zIndex: 2, 
             }}
           >
-            <h1 style={{ fontSize: '3rem', lineHeight: '1.2', margin: '0 0 20px 0' }}> {/* Adjusted font size */}
+            <Typography 
+              variant="h1" 
+              sx={{
+                fontSize: { xs: '1.5rem', sm: '3rem' }, 
+                lineHeight: { xs: '1.2', sm: '1.2' },
+                margin: '0 0 20px 0',
+              }}
+            >
               Explore the dystopian<br />
               world of CyberVerse
-            </h1>
-            <p style={{ 
-              fontSize: '1.7rem', 
-              color: 'black', 
-              lineHeight: '1.5', 
-              margin: '0 0 30px 0',
-              textShadow: '2px 2px 2px rgba(255,255,255,0.5)'
-            }}>
+            </Typography>
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                fontSize: { xs: '1rem', sm: '1.7rem' }, 
+                color: 'black', 
+                lineHeight: { xs: '1.5', sm: '1.5' },
+                margin: '0 0 30px 0',
+                textShadow: '2px 2px 2px rgba(255,255,255,0.5)',
+              }}
+            >
               Explore, play, earn and have fun on Ergo Blockchain!
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            </Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Button
                 variant="contained"
                 onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
@@ -115,20 +127,17 @@ export default function Home() {
               >
                 Join the community
               </Button>
-            </div>
+            </Box>
           </Box>
-        </div>
+        </Box>
       </Box>
       <SectionText />
       <Features />
       <CyberCitizens />
       <News />
-      <div ref={roadmapRef}>
-   
-      </div>
+      <Box ref={roadmapRef} />
       <NeohubSection />
-   
-      <Footer  />
+      <Footer />
     </Box>
   );
 }
