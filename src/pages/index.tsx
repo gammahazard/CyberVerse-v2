@@ -29,9 +29,13 @@ export default function Home() {
   }, [router.asPath]);
 
   return (
+    
     <Box>
+      
       <Navbar onRoadmapClick={scrollToRoadmap} />
+   
       <Box my={4} sx={{ marginTop: 0, position: 'relative', width: '100%', height: 'auto', marginInline: 'auto' }}>
+
         <Box sx={{ position: 'relative' }}>
           <img 
             src="/headerbg.gif" 

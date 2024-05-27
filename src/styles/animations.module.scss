@@ -4,6 +4,7 @@
   overflow: hidden;
   position: fixed; 
   top: 0; 
+  z-index:999;
   left: 0;
   z-index: -5; 
   pointer-events: none;
@@ -11,6 +12,7 @@
 
 .circle-container {
   $particleNum: 50;
+  z-index:999;
   pointer-events: none;
   position: absolute;
   transform: translateY(-10vh);
@@ -26,7 +28,7 @@
     background-image: radial-gradient(
       #FF00FC(345, 90%, 49%), 
       #FF00FC(345, 100%, 50%) 10%, 
-      #000C56 56%
+      #cacddc 56%
     );
 
     animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
@@ -88,6 +90,7 @@
 
       .circle {
         $brightness: 50% + random(50%); 
+       z-index:999;
         filter: brightness($brightness);
         opacity: 0.3 + (random(50) / 100); // Changed this line to generate a float random opacity
         animation-delay: random(4000) + ms;
