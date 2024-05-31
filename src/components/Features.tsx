@@ -1,4 +1,4 @@
-import { Box, Typography, IconButton, useMediaQuery } from '@mui/material';
+import { Box, Typography, IconButton, useMediaQuery, List, ListItem, ListItemText } from '@mui/material';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -129,24 +129,15 @@ const Features = () => {
         >
           {currentFeature.subheading}
         </Typography>
-        <Box>
+        <List>
           {currentFeature.description.map((point, index) => (
-            <Typography 
-              key={index}
-              variant="body1" 
-              paragraph 
-              align="left"
-              style={{
-                color: '#E1EBFA',
-                fontSize: isMobile ? '1rem' : '1.2rem',
-                lineHeight: '1.5',
-                marginBottom: '10px',
-              }}
-            >
-              {point}
-            </Typography>
+            <ListItem key={index} sx={{ color: '#E1EBFA', padding: '0' }}>
+              <ListItemText primaryTypographyProps={{ variant: 'body1', sx: { fontSize: isMobile ? '1rem' : '1.2rem' } }}>
+                {`• ${point}`}
+              </ListItemText>
+            </ListItem>
           ))}
-        </Box>
+        </List>
         <Box display="flex" gap={2}>
           <IconButton onClick={handlePrev} style={{ color: '#FF00FC' }}>
             <ArrowBackIosIcon style={{ fontSize: '2rem' }} />
