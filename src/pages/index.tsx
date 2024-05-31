@@ -49,6 +49,7 @@ export default function Home() {
             sx={{
               position: 'absolute',
               top: 0,
+     
               left: 0,
               width: '100%',
               height: '100%',
@@ -90,7 +91,7 @@ export default function Home() {
                 textShadow: '2px 2px 2px rgba(255,255,255,0.5)',
               }}
             >
-              Embark on solo adventures or team up with friends. Dive into a variety of mini-games, explore extensive real estate options, and experience so much more in CyberVerse!
+              Explore, play, earn and have fun on the Ergo and Cardano Blockchain!
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Button

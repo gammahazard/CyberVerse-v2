@@ -92,6 +92,7 @@ const Features = () => {
       gap={4}
       style={{
         backgroundColor: '#121212',
+        marginTop: "5rem",
         border: '2px solid #FF00FC',
         borderRadius: '12px',
         padding: isMobile ? '10px' : '20px',
