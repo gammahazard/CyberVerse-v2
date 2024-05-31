@@ -14,6 +14,7 @@ const PatchPage = () => {
   return (
     <Box>
       <Navbar />
+
       <Typography variant="h1">Patch Notes</Typography>
       <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
         {posts.map((post) => (

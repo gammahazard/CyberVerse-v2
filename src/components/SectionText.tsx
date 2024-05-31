@@ -1,9 +1,10 @@
+// @ts-ignore
 import { Box, Typography, Button, Snackbar } from '@mui/material';
 import { useState } from 'react';
-
+import { useRouter } from 'next/router';
 const SectionText = () => {
   const [openSnackbar, setOpenSnackbar] = useState(false);
-
+  const router = useRouter();
   const handleSnackbarOpen = () => {
     setOpenSnackbar(true);
   };
@@ -43,43 +44,43 @@ const SectionText = () => {
             marginBottom: '20px',
           }}
         >
-          Cyberverse is a vast open world where you can play, earn and have fun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia purus non velit ultrices, id vulputate eros pellentesque. Suspendisse potenti. Nulla facilisi. Integer non pulvinar tortor, id laoreet orci. Aenean malesuada velit in lectus convallis, id varius nulla eleifend. Donec ac lectus vitae libero aliquet dapibus. Curabitur tempus sollicitudin risus nec venenatis. Cras hendrerit metus id nisl faucibus, non dictum turpis laoreet. Quisque convallis, erat vel scelerisque viverra, mi eros vehicula libero, id varius eros velit ut nisl. Morbi tempus massa at lacus pharetra scelerisque. Ut sed semper ipsum, in viverra ligula. Donec facilisis orci non diam fringilla, nec luctus elit ullamcorper. Mauris nec magna vitae orci malesuada tristique. Nam sit amet orci lacus. Nam et turpis eu orci tristique viverra. Sed sit amet ipsum magna.
+          CyberVerse is a free-to-play, pixel-based MMORPG currently available in beta on both the Ergo and Cardano blockchains. Players can explore Cyberia city, engage in a variety of mini-games, and earn CYPX.
         </Typography>
         <Box display="flex" gap={2}>
             <Button 
             variant="contained"
-            onClick={handleSnackbarOpen}
+            onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
             style={{
               backgroundColor: '#FF00FC',
               color: '#E1EBFA',
               fontSize: '20px',
               fontWeight: 700,
               lineHeight: '26px',
-              width: '100%', 
+              width: '50%', 
               height: '60px',
               marginRight: '20px',
               outline: 'none',
             }}
           >
-            Discover CyberVerse
+            PLAY FOR FREE
           </Button>
           <Button 
-            onClick={() => window.open('https://skyharbor.io', '_blank', 'noopener,noreferrer')}
-            variant="outlined"
-            style={{
-              borderColor: '#FF00FC',
-              color: '#FF00FC',
-              fontSize: '20px',
-              fontFamily: 'pixelFont',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '100%', 
-              height: '60px',
-              outline: 'none',
-            }}
-          >
-            Marketplace
-          </Button>
+                onClick={() => router.push('/wiki')}
+                variant="outlined"
+                sx={{
+                  borderColor: '#FF00FC',
+                  color: '#FF00FC',
+                  fontSize: '20px',
+                  fontFamily: '"pixelFont"',
+                  fontWeight: 700,
+                  lineHeight: '26px',
+                  width: '50%', // Adjusted width to match the other button
+                  height: '60px',
+                  outline: 'none',
+                }}
+              >
+                EXPLORE WIKI
+              </Button>
         </Box>
       </Box>
       <Box 

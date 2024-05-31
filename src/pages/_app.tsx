@@ -4,6 +4,8 @@ import CustomCursor from '../components/CustomCursor';
 import type { AppProps } from 'next/app';
 import MaintenanceMode from '../components/MaintenanceMode'; // Import the new component
 import Head from 'next/head'; // Import Head from next/head
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const MAINTENANCE_MODE = false; // Set to false to turn off maintenance mode
 

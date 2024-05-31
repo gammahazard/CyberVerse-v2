@@ -1,99 +1,193 @@
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, IconButton, useMediaQuery } from '@mui/material';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useTheme } from '@mui/material/styles';
+
+const featuresData = [
+  {
+    title: "Feature 1",
+    subheading: "Subheading for Feature 1",
+    description: [
+      "Bullet point 1",
+      "Bullet point 2",
+      "Bullet point 3",
+      "Bullet point 4",
+    ],
+    image: "/gen3.png"
+  },
+  {
+    title: "Feature 2",
+    subheading: "Subheading for Feature 2",
+    description: [
+      "Bullet point 1",
+      "Bullet point 2",
+      "Bullet point 3",
+      "Bullet point 4",
+    ],
+    image: "/gen3.png"
+  },
+  {
+    title: "Feature 3",
+    subheading: "Subheading for Feature 3",
+    description: [
+      "Bullet point 1",
+      "Bullet point 2",
+      "Bullet point 3",
+      "Bullet point 4",
+    ],
+    image: "/gen3.png"
+  },
+  {
+    title: "Feature 4",
+    subheading: "Subheading for Feature 4",
+    description: [
+      "Bullet point 1",
+      "Bullet point 2",
+      "Bullet point 3",
+      "Bullet point 4",
+    ],
+    image: "/gen3.png"
+  },
+  {
+    title: "Feature 5",
+    subheading: "Subheading for Feature 5",
+    description: [
+      "Bullet point 1",
+      "Bullet point 2",
+      "Bullet point 3",
+      "Bullet point 4",
+    ],
+    image: "/gen3.png"
+  },
+];
 
 const Features = () => {
-  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const handleSnackbarOpen = () => {
-    setOpenSnackbar(true);
+  const handleNext = () => {
+    setCurrentFeatureIndex((prevIndex) => (prevIndex + 1) % featuresData.length);
   };
+
+  const handlePrev = () => {
+    setCurrentFeatureIndex((prevIndex) => (prevIndex - 1 + featuresData.length) % featuresData.length);
+  };
+
+  const currentFeature = featuresData[currentFeatureIndex];
 
   return (
     <Box 
       display="flex" 
-      flexDirection={{ xs: 'column-reverse', md: 'row' }} 
+      width="90%"
+      margin="auto"
+      flexDirection={{ xs: 'column', md: 'row' }} 
       alignItems="center" 
       justifyContent="space-between" 
       fontFamily="pixelFont"
       my={4} 
-      px={4}
+      px={2}
       gap={4}
+      style={{
+        backgroundColor: '#121212',
+        border: '2px solid #FF00FC',
+        borderRadius: '12px',
+        padding: isMobile ? '10px' : '20px',
+      }}
     >
       <Box 
         flex={1} 
         p={2} 
         display="flex"
-        justifyContent="center"
-        alignItems="center"
+        flexDirection="column"
+        alignItems="flex-start"
+        order={{ xs: 2, md: 1 }}
       >
-        <Box
-          style={{
-            position: 'relative',
-            paddingTop: '56.25%', // 16:9 aspect ratio
-            width: '100%',
-            borderRadius: '8px',
-            overflow: 'hidden',
-          }}
-        >
-          <img
-            src="/hero-image.png" // Path to your image in the public folder
-            alt="Filler"
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-            }}
-          />
-        </Box>
-      </Box>
-      <Box flex={1} p={2}>
         <Typography 
-          variant="h2" 
+          variant={isMobile ? "h4" : "h2"} 
           gutterBottom 
           align="left"
           style={{
             color: '#E1EBFA',
-            fontSize: '3rem',
+            fontSize: isMobile ? '2rem' : '3rem',
             fontWeight: 700,
           }}
         >
           FEATURES
         </Typography>
         <Typography 
-          variant="body1" 
-          paragraph 
+          variant={isMobile ? "h6" : "h5"} 
+          gutterBottom 
           align="left"
           style={{
-            color: '#E1EBFA',
-            fontSize: '1.2rem',
-            lineHeight: '1.5',
-            marginBottom: '20px',
+            color: '#FF00FC',
+            fontSize: isMobile ? '1.5rem' : '2rem',
+            fontWeight: 500,
           }}
         >
-          Cyberverse is a vast open world where you can play, earn and have fun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia purus non velit ultrices, id vulputate eros pellentesque. Suspendisse potenti. Nulla facilisi. Integer non pulvinar tortor, id laoreet orci. Aenean malesuada velit in lectus convallis, id varius nulla eleifend. Donec ac lectus vitae libero aliquet dapibus. Curabitur tempus sollicitudin risus nec venenatis. Cras hendrerit metus id nisl faucibus, non dictum turpis laoreet. Quisque convallis, erat vel scelerisque viverra, mi eros vehicula libero, id varius eros velit ut nisl. Morbi tempus massa at lacus pharetra scelerisque. Ut sed semper ipsum, in viverra ligula. Donec facilisis orci non diam fringilla, nec luctus elit ullamcorper. Mauris nec magna vitae orci malesuada tristique. Nam sit amet orci lacus. Nam et turpis eu orci tristique viverra. Sed sit amet ipsum magna.
+          {currentFeature.subheading}
         </Typography>
+        <Box>
+          {currentFeature.description.map((point, index) => (
+            <Typography 
+              key={index}
+              variant="body1" 
+              paragraph 
+              align="left"
+              style={{
+                color: '#E1EBFA',
+                fontSize: isMobile ? '1rem' : '1.2rem',
+                lineHeight: '1.5',
+                marginBottom: '10px',
+              }}
+            >
+              {point}
+            </Typography>
+          ))}
+        </Box>
         <Box display="flex" gap={2}>
-
-          <Button 
-            onClick={() => window.open('https://skyharbor.io', '_blank', 'noopener,noreferrer')}
-            variant="outlined"
+          <IconButton onClick={handlePrev} style={{ color: '#FF00FC' }}>
+            <ArrowBackIosIcon style={{ fontSize: '2rem' }} />
+          </IconButton>
+          <IconButton onClick={handleNext} style={{ color: '#FF00FC' }}>
+            <ArrowForwardIosIcon style={{ fontSize: '2rem' }} />
+          </IconButton>
+        </Box>
+      </Box>
+      <Box 
+        flex={1} 
+        p={2} 
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        order={{ xs: 1, md: 2 }}
+        style={{ width: '100%' }}
+      >
+        <Box
+          style={{
+            position: 'relative',
+            width: '100%',
+            borderRadius: '8px',
+            overflow: 'hidden',
+            height: isMobile ? '300px' : '500px', // Set height on mobile to ensure visibility
+          }}
+        >
+          <motion.img
+            key={currentFeature.image}
+            src={currentFeature.image} // Path to your image
+            alt="Feature Image"
             style={{
-              borderColor: '#FF00FC',
-              color: '#FF00FC',
-              fontSize: '20px',
-              fontFamily: 'pixelFont',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '100%', 
-              height: '60px',
-              outline: 'none',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
             }}
-          >
-           Learn More
-          </Button>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          />
         </Box>
       </Box>
     </Box>

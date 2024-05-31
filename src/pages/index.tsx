@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Box, Button, Typography } from '@mui/material';
 import { useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
@@ -29,13 +30,9 @@ export default function Home() {
   }, [router.asPath]);
 
   return (
-    
     <Box>
-      
       <Navbar onRoadmapClick={scrollToRoadmap} />
-   
-      <Box my={4} sx={{ marginTop: 0, position: 'relative', width: '100%', height: 'auto', marginInline: 'auto' }}>
-
+      <Box my={4} sx={{ marginTop: 0, position: 'relative', width: 'auto', height: 'auto', marginInline: 'auto' }}>
         <Box sx={{ position: 'relative' }}>
           <img 
             src="/headerbg.gif" 
@@ -44,7 +41,7 @@ export default function Home() {
               width: '100%',
               display: 'block',
               height: 'auto', 
-              objectFit: 'cover', 
+              objectFit: 'contain', 
               margin: '0 auto',
             }} 
           />
@@ -67,15 +64,15 @@ export default function Home() {
               transform: 'translate(-50%, -50%)', 
               textAlign: 'center', 
               color: 'white', 
-              width: '90%', 
-              maxWidth: '600px', 
+              width: '100%',  // Increased width to avoid text being squished
+              maxWidth: '800px',  // Adjusted maxWidth for better responsiveness
               zIndex: 2, 
             }}
           >
             <Typography 
               variant="h1" 
               sx={{
-                fontSize: { xs: '1.5rem', sm: '3rem' }, 
+                fontSize: { xs: '1.5rem', sm: '2.5rem', md: '5rem' }, // Adjusted font sizes for mobile, small screens, and desktop
                 lineHeight: { xs: '1.2', sm: '1.2' },
                 margin: '0 0 20px 0',
               }}
@@ -86,14 +83,14 @@ export default function Home() {
             <Typography 
               variant="body1" 
               sx={{ 
-                fontSize: { xs: '1rem', sm: '1.7rem' }, 
-                color: 'black', 
+                fontSize: { xs: '0.8rem', sm: '1rem', md: '1.7rem' }, // Adjusted font sizes for mobile, small screens, and desktop
+                color: 'white', // Changed text color to white
                 lineHeight: { xs: '1.5', sm: '1.5' },
                 margin: '0 0 30px 0',
                 textShadow: '2px 2px 2px rgba(255,255,255,0.5)',
               }}
             >
-              Explore, play, earn and have fun on Ergo Blockchain!
+              Embark on solo adventures or team up with friends. Dive into a variety of mini-games, explore extensive real estate options, and experience so much more in CyberVerse!
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Button
