@@ -11,51 +11,54 @@ const Custom404 = () => {
       <Box flex="1" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
         <Typography
           sx={{
-            color: '##FF00FC',
+            color: '#FF00FC',
             fontSize: '96px',
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
             lineHeight: '125px',
             mb: 4,
+            textShadow: '2px 2px 10px #FF00FC',
           }}
         >
           404
         </Typography>
         <Typography
           sx={{
-            color: '#fff',
+            color: '#E1EBFA',
             fontSize: '60px',
             fontFamily: '"Source Sans Pro"',
             fontWeight: 700,
             lineHeight: '70px',
             mb: 4,
+            textShadow: '2px 2px 10px #FF00FC',
           }}
         >
           Page Not Found
         </Typography>
         <Link href="/" passHref>
           <Button
-            variant="outlined"
+            variant="contained"
             sx={{
-              borderColor: '#ff3b30',
-              color: '#ff3b30',
-              backgroundColor: 'rgba(0,0,0,0)',
+              backgroundColor: '#FF00FC',
+              color: '#E1EBFA',
               fontSize: '20px',
-              fontFamily: '"Source Sans Pro"',
+              fontFamily: '"pixelFont"',
               fontWeight: 700,
               lineHeight: '26px',
               width: '220px',
               height: '58px',
               outline: 'none',
+              '&:hover': {
+                backgroundColor: '#E1EBFA',
+                color: '#FF00FC',
+              },
             }}
           >
             Go Home
           </Button>
         </Link>
       </Box>
-       <Footer />
-
-
+      <Footer />
     </Box>
   );
 };
