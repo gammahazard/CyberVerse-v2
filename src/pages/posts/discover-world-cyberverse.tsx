@@ -13,8 +13,8 @@ const DiscoverWorldCyberverse = () => {
       <Image
         src="https://static.wikia.nocookie.net/cyberverse/images/a/af/Minttank.png/revision/latest/scale-to-width-down/185?cb=20240225081927"
         alt="Discover the World of CyberVerse"
-        width={800}
-        height={533}
+         width={400}
+        height={233}
         style={{ borderRadius: '8px', marginBottom: '20px', width: '100%', height: 'auto' }}
       />
       <Box
