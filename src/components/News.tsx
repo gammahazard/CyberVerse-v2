@@ -1,8 +1,9 @@
 // @ts-ignore
-import { Box, Typography, Card, CardContent, CardMedia, IconButton, Modal, Grid } from '@mui/material';
+import { Box, Typography, Card, CardContent, CardMedia, IconButton, Modal, Grid, Link } from '@mui/material';
 import { useState } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 // Define the type for news items
 interface NewsItem {
@@ -11,6 +12,7 @@ interface NewsItem {
   content: string;
   datePublished: string;
   imageUrl: string;
+  tweetId?: string; // Optional field for tweet ID
 }
 
 const News = () => {
@@ -30,45 +32,55 @@ const News = () => {
   const newsItems: NewsItem[] = [
     {
       id: 1,
-      title: 'CYPX hits new high',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut hendrerit velit.',
+      title: 'CyberVerse Town Hall Announcement!',
+      content: 'Join @kilver_erg and @sisyphuspush for our community town hall on coming up on Sunday June 2nd!',
       datePublished: 'May 31, 2024',
-      imageUrl: '/gen2.png',
+      imageUrl: '/townhall.jpg',
+      tweetId: '1796294872074457352'
     },
     {
       id: 2,
-      title: 'New CyberVerse Update Released',
-      content: 'Sed euismod tincidunt felis, nec volutpat nisl ultricies eu. Nullam at ligula quis sapien consectetur euismod.',
-      datePublished: 'June 5, 2024',
-      imageUrl: '/gen2.png',
+      title: 'CyberVerse x House of Titans partnership announced!',
+      content: `We're excited to announce our partnership with House of Titans! 
+
+House of Titans is a digital collectibles project with a utility-driven, gamification-focused approach on the Cardano blockchain!`,
+      datePublished: 'May 31, 2024',
+      imageUrl: '/titan-cyberverse.png',
+      tweetId: '1794383208554877128', // ID of the tweet to embed
     },
     {
       id: 3,
-      title: 'CyberVerse Community Event',
-      content: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-      datePublished: 'June 12, 2024',
-      imageUrl: '/gen2.png',
+      title: 'CyberVerse x Omen partnership announced!',
+      content: `In the coming weeks, we'll be bringing Omen into CyberVerse! Omen is a self sustaining ecosystem on Cardano. http://nemonium.com/`,
+      datePublished: 'May 14, 2024',
+      imageUrl: '/omen-cyberverse.jpg',
+      tweetId: '1790505806783185370', // ID of the tweet to embed
     },
+
     {
       id: 4,
-      title: 'CyberVerse Partners with XYZ',
-      content: 'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.',
-      datePublished: 'June 20, 2024',
-      imageUrl: '/gen3.png',
+      title: 'Community market surpasses 5 million $CYPX trading volume!',
+      content: `Our community market has surpassed the 5,000,000 $CYPX in trading volume, which is equivalent to 6.2k Ergo at current CYPX price! Thanks to everyone for supporting CyberVerse, and let's keep the momentum going!`,
+      datePublished: 'May 22, 2024',
+      imageUrl: '/marketplace-volume.jpg',
+      tweetId: '1793301080761385145', // ID of the tweet to embed
     },
+ 
     {
       id: 5,
-      title: 'New Features Coming Soon',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut hendrerit velit.',
-      datePublished: 'June 25, 2024',
-      imageUrl: '/gen3.png',
+      title: 'Rising Player Counts',
+      content: 'Our daily average number of active players is showing an upward trend, we are now averaging between 60-70 active players online every day!',
+      datePublished: 'May 28, 2024',
+      imageUrl: '/player-count.jpg',
+      tweetId: '1795539702898163735'
     },
     {
       id: 6,
-      title: 'Join the CyberVerse Tournament',
-      content: 'Sed euismod tincidunt felis, nec volutpat nisl ultricies eu. Nullam at ligula quis sapien consectetur euismod.',
-      datePublished: 'June 30, 2024',
-      imageUrl: '/gen3.png',
+      title: 'CyberVerse Wiki Website Announced',
+      content: 'The CyberVerse Wiki now has its own website, found at cyberversewiki.com! special thanks to @lexim0n',
+      datePublished: 'May 28, 2024',
+      imageUrl: '/wiki.png',
+      tweetId: '1795414078510223496'
     },
   ];
 
@@ -89,7 +101,7 @@ const News = () => {
       my={4}
       px={2}
       gap={4}
-      sx={{         marginTop: "15rem"}}
+      sx={{ marginTop: "15rem"}}
     >
       <Typography
         variant="h2"
@@ -162,7 +174,7 @@ const News = () => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            bgcolor: 'background.paper',
+            bgcolor: 'black',
             border: '1px solid #000',
             boxShadow: 24,
             p: 4,
@@ -178,10 +190,26 @@ const News = () => {
               <Typography variant="h3" gutterBottom>
                 {selectedNews.title}
               </Typography>
+              <CardMedia
+                component="img"
+                image={selectedNews.imageUrl}
+                alt={selectedNews.title}
+                style={{ height: '300px', width: '100%', objectFit: 'cover', marginBottom: '20px' }}
+              />
               <Typography variant="body1" gutterBottom>
                 {selectedNews.content}
               </Typography>
-              <Typography variant="caption">{selectedNews.datePublished}</Typography>
+              {selectedNews.tweetId && (
+                <TwitterTweetEmbed tweetId={selectedNews.tweetId} />
+              )}
+              <Typography variant="caption" display="block" gutterBottom>
+                {selectedNews.datePublished}
+              </Typography>
+              {selectedNews.tweetId && (
+                <Link href={`https://x.com/CyberVerse_io/status/${selectedNews.tweetId}`} target="_blank" rel="noopener" underline="hover">
+                  View Tweet
+                </Link>
+              )}
             </>
           )}
         </Box>
