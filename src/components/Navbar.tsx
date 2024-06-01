@@ -34,7 +34,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
         <Box display="flex" alignItems="center" gap={2}>
           <Button
-            onClick={() => window.open('https:/playcyberverse.com', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://docs.cyberversegame.io/whitepaper-v3', '_blank', 'noopener,noreferrer')}
             className="nav-item"
             sx={{ fontSize: '1.5rem !important' }}
           >
