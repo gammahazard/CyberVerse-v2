@@ -35,7 +35,7 @@ const SectionText = () => {
           <Box key={index} style={{ padding: '0', position: 'relative' }}>
             <Box
               style={{
-                height: '300px',
+                height: '500px',
                 backgroundColor: 'rgba(0, 0, 0, 0.2)',
                 borderRadius: '8px',
                 display: 'flex',

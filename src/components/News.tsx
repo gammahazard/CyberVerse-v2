@@ -89,7 +89,7 @@ const News = () => {
       my={4}
       px={2}
       gap={4}
-      sx={{         marginTop: "8rem"}}
+      sx={{         marginTop: "15rem"}}
     >
       <Typography
         variant="h2"
