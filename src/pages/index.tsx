@@ -31,7 +31,9 @@ export default function Home() {
 
   return (
     <Box>
+
       <Navbar onRoadmapClick={scrollToRoadmap} />
+      <AnimationComponent />
       <Box my={4} sx={{ marginTop: 0, position: 'relative', width: 'auto', height: 'auto', marginInline: 'auto' }}>
         <Box sx={{ position: 'relative' }}>
           <img 
