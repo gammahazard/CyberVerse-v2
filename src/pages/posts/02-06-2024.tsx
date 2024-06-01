@@ -74,7 +74,7 @@ const CyberVerseUpdateFebruary62024 = () => {
           <li>Added UI</li>
           <li>Added functions</li>
           <li>Added first 2 NFT emote crate collections</li>
-          <li>Pressing "B" on keyboard shows NFT emote inventory</li>
+          <li>Pressing &quot;B&quot; on keyboard shows NFT emote inventory</li>
           <li>When using emotes, they show for 3 seconds and then disappear; others see what you display</li>
         </Box>
 
@@ -84,7 +84,7 @@ const CyberVerseUpdateFebruary62024 = () => {
           <li>Added functions</li>
           <li>Added TRADE button</li>
           <li>Added TWITTER link button; players can link their Twitter in the game profile</li>
-          <li>Pressing "K" near a player shows their profile account</li>
+          <li>Pressing &quot;K&quot; near a player shows their profile account</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>In-Game Player-to-Player Trading</Typography>
@@ -96,9 +96,9 @@ const CyberVerseUpdateFebruary62024 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Apartment Multiplayer Access</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Added function to set owner's apartment to private or public</li>
+          <li>Added function to set owner&apos;s apartment to private or public</li>
           <li>Private: Only the owner can see it; no one else can access the property</li>
-          <li>Public: Everyone can see it and visit the property, but they can't edit it</li>
+          <li>Public: Everyone can see it and visit the property, but they can&apos;t edit it</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>The Wolf and Sheep Mini Game</Typography>
@@ -108,7 +108,7 @@ const CyberVerseUpdateFebruary62024 = () => {
           <li>Maximum players: 10</li>
           <li>1 wolf, the rest are sheep</li>
           <li>Wolf is faster than sheep</li>
-          <li>Pressing "E" allows the wolf to attack</li>
+          <li>Pressing &quot;E&quot; allows the wolf to attack</li>
           <li>The wolf needs to hunt all sheep before the countdown expires to win</li>
           <li>The wolf gains points for every sheep hunted and when he wins</li>
           <li>Sheep need to hide and stay alive until the countdown expires</li>
@@ -134,8 +134,8 @@ const CyberVerseUpdateFebruary62024 = () => {
           <li>Changed spawning ores from 60 seconds to 200 seconds</li>
           <li>Removed the papers around the city used for finding the treasury</li>
           <li>Added energy indicator in citizen selection</li>
-          <li>Fixed 2 rooms in the penthouse that couldn't be customized with walls and floors</li>
-          <li>Changed crafting amounts for wires and cables from 6 & 4 to 3 & 2</li>
+          <li>Fixed 2 rooms in the penthouse that couldn&apos;t be customized with walls and floors</li>
+          <li>Changed crafting amounts for wires and cables from 6 &amp; 4 to 3 &amp; 2</li>
           <li>In apartments, clicking on the missing item sends you to the crafting recipe</li>
           <li>Added confirmation about purchase when trying to buy tickets in the weekly lottery</li>
           <li>Added admin page (users) to see all players online and their locations in real-time</li>

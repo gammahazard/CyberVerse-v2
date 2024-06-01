@@ -30,7 +30,7 @@ const CyberVerseUpdateSeptember232023 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+      <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -63,7 +63,7 @@ const CyberVerseUpdateSeptember232023 = () => {
         </Typography>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>GEN3 Update Overview</Typography>
-        <Typography variant="body1"><strong>The marketplace won't be working for a few hours until we fix an issue that just appeared, sorry for that!</strong></Typography>
+        <Typography variant="body1"><strong>The marketplace won&apos;t be working for a few hours until we fix an issue that just appeared, sorry for that!</strong></Typography>
 
         <Typography variant="h4" sx={{ color: '#03a9f4', marginTop: '20px' }}>NFT Marketplace</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>

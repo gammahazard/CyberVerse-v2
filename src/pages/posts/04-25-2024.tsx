@@ -30,7 +30,7 @@ const CyberVerseUpdateApril252024 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -62,8 +62,8 @@ const CyberVerseUpdateApril252024 = () => {
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Improvements</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Reduced the probability of spawning seeds by 70% during exploration</li>
-          <li>Added a new AudioNFT track "Restless Nights" to the game</li>
-          <li>Introduced a new AudioNFT track - "SuperNova" to the game</li>
+          <li>Added a new AudioNFT track &quot;Restless Nights&quot; to the game</li>
+          <li>Introduced a new AudioNFT track - &quot;SuperNova&quot; to the game</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Online Players</Typography>
@@ -73,17 +73,17 @@ const CyberVerseUpdateApril252024 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Fixes</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Resolved key response issues post-trading; keys such as 'i', 'c', etc., now properly access inventory, crafting, etc.</li>
+          <li>Resolved key response issues post-trading; keys such as &apos;i&apos;, &apos;c&apos;, etc., now properly access inventory, crafting, etc.</li>
           <li>Removed the option to connect wallets via deposit to address Cardano support issues.</li>
           <li>Corrected an energy calculation error where consuming a drink after mining left the player with incorrect energy levels.</li>
-          <li>When accessing a furnace through the >add> tab, after closing, the screen will now move with your CyberCitizen.</li>
+          <li>When accessing a furnace through the &gt;add&gt; tab, after closing, the screen will now move with your CyberCitizen.</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Parental Control</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Implemented a feature that restricts certain activities on player accounts.</li>
           <li>Activation/deactivation of this feature now requires a password.</li>
-          <li>When activated, access to the casino is disabled with a notification: "Your account is subject to parental control."</li>
+          <li>When activated, access to the casino is disabled with a notification: &quot;Your account is subject to parental control.&quot;</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Discord Server Update</Typography>

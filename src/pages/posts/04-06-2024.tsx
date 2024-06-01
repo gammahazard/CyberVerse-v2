@@ -30,7 +30,7 @@ const CyberVerseUpdateApril62024 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -65,17 +65,17 @@ const CyberVerseUpdateApril62024 = () => {
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>New Features</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>New way to login with some changes in the UI.</li>
-          <li>The game's open page will ask you to choose to connect from Ergo wallet or Cardano wallet with some specific details. (If you already play with Ergo Wallet, go to settings and it shows Cardano wallet to link)</li>
+          <li>The game&apos;s open page will ask you to choose to connect from Ergo wallet or Cardano wallet with some specific details. (If you already play with Ergo Wallet, go to settings and it shows Cardano wallet to link)</li>
           <li>Ergo wallet will always open the same old UI.</li>
           <li>Cardano wallet will always let you sign without sending any fee.</li>
-          <li>Password page or password feature are locked if you don't have any Ergo wallet in your account yet.</li>
+          <li>Password page or password feature are locked if you don&apos;t have any Ergo wallet in your account yet.</li>
           <li>Limit account features to only view (no edit) all features on the lobby page.</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>UI to Add Ergo Wallet</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Similar steps to how Ergo wallet login works, but different tasks and backend code.</li>
-          <li>After successfully connecting Ergo wallet, kick the player with the message "You are now linked to Ergo wallet. Please refresh the page."</li>
+          <li>After successfully connecting Ergo wallet, kick the player with the message &quot;You are now linked to Ergo wallet. Please refresh the page.&quot;</li>
           <li>After the refresh, all the game features would be available.</li>
         </Box>
 

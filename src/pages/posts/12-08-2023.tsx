@@ -30,7 +30,7 @@ const CyberVerseUpdateDecember132023 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -66,7 +66,7 @@ const CyberVerseUpdateDecember132023 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Account Password Login</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Added password feature where players can set up a password when logging into the game so they don't have to pay the fee after every relog</li>
+          <li>Added password feature where players can set up a password when logging into the game so they don&apos;t have to pay the fee after every relog</li>
           <li>At start, players during verification send 1 fee and then set up the password</li>
           <li>Once they set up their password, they can log into the game with the password next time</li>
           <li>How it works:
@@ -74,15 +74,15 @@ const CyberVerseUpdateDecember132023 = () => {
               <li>Newcomer connects their wallet to the game and verifies their wallet</li>
               <li>Once in the lobby, they go to settings</li>
               <li>In settings, they click change password</li>
-              <li>They set up their password and it's done</li>
+              <li>They set up their password and it&apos;s done</li>
             </Box>
           </li>
-          <li>After setting up the password, they can log into the game using the password once connected with their wallet and don't have to pay the verification fee</li>
+          <li>After setting up the password, they can log into the game using the password once connected with their wallet and don&apos;t have to pay the verification fee</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Login & Server & Mac Improvements</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Changed the way the server operates for login; this should help solve the issue when players paid the verification fee and the game didn't verify the player</li>
+          <li>Changed the way the server operates for login; this should help solve the issue when players paid the verification fee and the game didn&apos;t verify the player</li>
           <li>Fixed some errors from our database that caused our game server to crash sometimes</li>
           <li>Sped up the opening of the game speed by x(8-16) and fixed some Mac problems</li>
         </Box>
@@ -90,7 +90,7 @@ const CyberVerseUpdateDecember132023 = () => {
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Global Chat</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Added global chat to the game that allows people to chat with all active players</li>
-          <li>Added function when you double-click on someone's nickname in the chat, it copies the player's message, nickname, and ergo public address</li>
+          <li>Added function when you double-click on someone&apos;s nickname in the chat, it copies the player&apos;s message, nickname, and ergo public address</li>
           <li>Each message is limited to 27 letters (this will change later)</li>
           <li>Added an option to close the global chat</li>
           <li>Added function to type and send messages in the chat</li>
@@ -138,7 +138,7 @@ const CyberVerseUpdateDecember132023 = () => {
           <li>Added leaderboard with tier rewards</li>
           <li>Added obstacles on the road (oil object) that slows you down</li>
           <li>Added coins that you can collect for an extra boost</li>
-          <li>Added countdown that shows players how long until the game ends if they don't reach the finish line</li>
+          <li>Added countdown that shows players how long until the game ends if they don&apos;t reach the finish line</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Daily Quests</Typography>

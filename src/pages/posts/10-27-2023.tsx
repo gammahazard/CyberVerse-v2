@@ -30,7 +30,7 @@ const CyberVerseUpdateOctober272023 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -94,9 +94,9 @@ const CyberVerseUpdateOctober272023 = () => {
           <li>Each apartment can have 1 Mining Rig - when you own multiple apartments, you can set up a mining rig in each one</li>
           <li>The mining rig is craftable</li>
           <li>You can select to place it somewhere in your apartment like furniture</li>
-          <li>When it's placed somewhere in your apartment, press E to open the inventory of the mining rig</li>
+          <li>When it&apos;s placed somewhere in your apartment, press E to open the inventory of the mining rig</li>
           <li>Every GPU comes up with X heat</li>
-          <li>The maximum heat the mining rig can take is 100 - above 100, it won't turn on</li>
+          <li>The maximum heat the mining rig can take is 100 - above 100, it won&apos;t turn on</li>
           <li>The cooling systems can reduce the total heat by X%</li>
           <li>To be able to mine, you need at least 1 GPU, CPU, PSU, MOTHERBOARD, and COOLING SYSTEM items</li>
           <li>There is also an electricity bill to pay, when you reach 100 electricity, it costs 1 CYPX to pay the bill (for now)</li>
@@ -133,7 +133,7 @@ const CyberVerseUpdateOctober272023 = () => {
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Added energy system</li>
           <li>Each NFT character can consume any 10 energy items per day</li>
-          <li>When consuming energy, you cannot go over 100 ENERGY (When an NFT character has 10 ENERGY left and consumes a 100 ENERGY item, the character's energy will go max to 100/100)</li>
+          <li>When consuming energy, you cannot go over 100 ENERGY (When an NFT character has 10 ENERGY left and consumes a 100 ENERGY item, the character&apos;s energy will go max to 100/100)</li>
           <li>List of energy items:
             <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
               <li>Bread = +20 ENERGY</li>
@@ -188,9 +188,9 @@ const CyberVerseUpdateOctober272023 = () => {
           <li>Added a 1/15 chance of getting dirt after harvesting plants</li>
         </Box>
 
-        <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>What's Next?</Typography>
+        <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>What&apos;s Next?</Typography>
         <Typography variant="body1">
-          We will be sharing a lot of information such as an updated short-term roadmap, CYPX token whitepaper, and more in the upcoming days. Hope you guys enjoy the update and don't forget to share your feedback with us! 🦾
+          We will be sharing a lot of information such as an updated short-term roadmap, CYPX token whitepaper, and more in the upcoming days. Hope you guys enjoy the update and don&apos;t forget to share your feedback with us! 🦾
         </Typography>
       </Box>
     </Box>

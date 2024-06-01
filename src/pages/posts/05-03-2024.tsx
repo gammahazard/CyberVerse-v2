@@ -30,7 +30,7 @@ const CyberVerseUpdateMay32024 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -65,7 +65,7 @@ const CyberVerseUpdateMay32024 = () => {
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>NPC Market</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Changed offer deals impacts from 80%/100%/120% to 80%/100%/170%</li>
-          <li>Added an option to deliver any amount that won't exceed the dealer's deal (e.g., if the dealer wants 30, the player can sell even just 1 or 10, and the dealer's offer will display 20 remaining)</li>
+          <li>Added an option to deliver any amount that won&apos;t exceed the dealer&apos;s deal (e.g., if the dealer wants 30, the player can sell even just 1 or 10, and the dealer&apos;s offer will display 20 remaining)</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Items</Typography>
@@ -75,7 +75,7 @@ const CyberVerseUpdateMay32024 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Accumulating Rewards</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Added confirmation UI for claiming all rewards and showing the fee after the player clicks on "claim all"</li>
+          <li>Added confirmation UI for claiming all rewards and showing the fee after the player clicks on &quot;claim all&quot;</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>NFT Marketplace</Typography>
@@ -92,7 +92,7 @@ const CyberVerseUpdateMay32024 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Quests</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Removed "claim daily reward" quest (this change will be visible in tomorrow's daily quests)</li>
+          <li>Removed &quot;claim daily reward&quot; quest (this change will be visible in tomorrow&apos;s daily quests)</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Sketchy Dealer</Typography>

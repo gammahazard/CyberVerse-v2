@@ -30,7 +30,7 @@ const CyberVerseUpdateMarch262024 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -79,8 +79,8 @@ const CyberVerseUpdateMarch262024 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>3. Requests Page</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Browse other players' item requests.</li>
-          <li>You can accept only the whole deal, e.g., "I need 5 A items for 100 CYPX."</li>
+          <li>Browse other players&apos; item requests.</li>
+          <li>You can accept only the whole deal, e.g., &quot;I need 5 A items for 100 CYPX.&quot;</li>
           <li>When a deal is accepted, the community market will take the items from your inventory and give you the CYPX in the deal.</li>
           <li>Sorting is always by requests date; you can search by selecting the item you are looking for. You have all the items on pages [1], [2], [3],... [10].</li>
         </Box>

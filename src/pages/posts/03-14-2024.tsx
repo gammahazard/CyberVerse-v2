@@ -13,7 +13,7 @@ const CyberVerseUpdateMarch142024 = () => {
       <Image
         src="https://static.wikia.nocookie.net/cyberverse/images/a/af/Minttank.png/revision/latest/scale-to-width-down/185?cb=20240225081927"
         alt="CyberVerse Update - March 14, 2024"
-         width={400}
+        width={400}
         height={233}
         style={{ borderRadius: '8px', marginBottom: '20px', width: '50%', height: 'auto' }}
       />
@@ -30,7 +30,7 @@ const CyberVerseUpdateMarch142024 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{

@@ -30,7 +30,7 @@ const CyberVerseUpdateSeptember12023 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/patch" passHref>
           <Button
             variant="outlined"
             sx={{
@@ -64,10 +64,10 @@ const CyberVerseUpdateSeptember12023 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Notifications</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Added notification for "not enough CYPX"</li>
-          <li>Added notification for "not enough energy"</li>
-          <li>Added notification when player without VIP card tries to enter the VIP section: "You need a VIP NFT Card to access VIP Section."</li>
-          <li>Added notifications for players who don't own an apartment and try to enter one: "You don't own this apartment."</li>
+          <li>Added notification for &quot;not enough CYPX&quot;</li>
+          <li>Added notification for &quot;not enough energy&quot;</li>
+          <li>Added notification when player without VIP card tries to enter the VIP section: &quot;You need a VIP NFT Card to access VIP Section.&quot;</li>
+          <li>Added notifications for players who don&apos;t own an apartment and try to enter one: &quot;You don&apos;t own this apartment.&quot;</li>
           <li>Improved notifications: sped up when there are many</li>
         </Box>
 
@@ -79,18 +79,18 @@ const CyberVerseUpdateSeptember12023 = () => {
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Crafting NFT Items</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Added NFT item crafting</li>
-          <li>Currently, 2 NFT items are available: Cyberium Jackhammer & Ergonium Jackhammer</li>
+          <li>Currently, 2 NFT items are available: Cyberium Jackhammer &amp; Ergonium Jackhammer</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Crafting Recipe Update</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Added a small addition: When opening an item recipe to craft and needing a certain sub-item crafted, you can click on the sub-item, and it takes you to the specific item's recipe</li>
+          <li>Added a small addition: When opening an item recipe to craft and needing a certain sub-item crafted, you can click on the sub-item, and it takes you to the specific item&apos;s recipe</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Rechargeable NFT Item Tools</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
           <li>Added recharging NFT items that are used as tools: jackhammers</li>
-          <li>Jackhammers: mine until the HP goes to zero, then ask to recharge the tool with "Power Cell" in-game item that can be crafted</li>
+          <li>Jackhammers: mine until the HP goes to zero, then ask to recharge the tool with &quot;Power Cell&quot; in-game item that can be crafted</li>
         </Box>
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Apartment Designs</Typography>

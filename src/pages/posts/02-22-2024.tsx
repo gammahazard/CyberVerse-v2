@@ -74,10 +74,10 @@ const CyberVerseUpdateFebruary222024 = () => {
           <li>NFTs - Added missing NFTs (nft emotes, cars, and apartments)</li>
           <li>In in-game trading - Added the ability for players to see real-time offers they choose before the other player clicks on the confirm button, so they can discuss it without completely canceling the trade UI</li>
           <li>Wolf and Sheep - Made countdown visible for how long the ability lasts when using ability</li>
-          <li>Wolf and Sheep minigame - Added by default the ability to “howl” every 30-45 sec as a wolf, making the sheep make a “baaah” sound in fear, indicating the side of the map they might be on</li>
+          <li>Wolf and Sheep minigame - Added by default the ability to &quot;howl&quot; every 30-45 sec as a wolf, making the sheep make a &quot;baaah&quot; sound in fear, indicating the side of the map they might be on</li>
           <li>Wolf, for every haunted sheep, gets extra time</li>
-          <li>Sheep can collect 1 ability in 1 slot inventory and use it by pressing “E”</li>
-          <li>Weekly lottery - Made text on the right bigger; fixed grammar: “You purchased 0 tickets.”</li>
+          <li>Sheep can collect 1 ability in 1 slot inventory and use it by pressing &quot;E&quot;</li>
+          <li>Weekly lottery - Made text on the right bigger; fixed grammar: &quot;You purchased 0 tickets.&quot;</li>
           <li>Inventory & Crafting - Made items searchable by name</li>
           <li>Crafting - Made green required items clickable (previously only red missing items were clickable)</li>
           <li>Energy items - Allowed players to use energy items from the quick selection inventory</li>
@@ -85,7 +85,7 @@ const CyberVerseUpdateFebruary222024 = () => {
           <li>Furnace - Changed coal to 1 coal melts 1 ore</li>
           <li>Apartment - Allowed apartment owners to use furniture like furnaces, mining rigs, etc., whether the apartment is set as public or private</li>
           <li>Apartment - Added plant and window crafts</li>
-          <li>Player’s profile - Added prompt "press K to show player’s profile" when near other players</li>
+          <li>Player’s profile - Added prompt &quot;press K to show player’s profile&quot; when near other players</li>
           <li>Player’s profile - Fixed links in player’s profiles to open the correct Twitter profile</li>
           <li>NPC - Added an indicator for interactive NPCs (e.g., Guy who sends you mining, bar game, furniture crate, etc.)</li>
           <li>Emotes - Enabled emotes during the Wolf and Sheep game</li>
@@ -94,11 +94,11 @@ const CyberVerseUpdateFebruary222024 = () => {
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Others</Typography>
         <Box component="ul" sx={{ listStyleType: 'none', margin: '0', padding: '0 0 0 20px' }}>
-          <li>Replaced the “E” icon .png with a new one</li>
+          <li>Replaced the &quot;E&quot; icon .png with a new one</li>
           <li>Fixed issue where you couldn’t select anything else after charging a jackhammer unless you selected the jackhammer again</li>
           <li>Museum - Removed AnetaBTC (the angel) statue from the museum</li>
           <li>General - Fixed small text errors from PDF list</li>
-          <li>Deposit in-game tokens - Changed text from “casino wallet” to “in-game wallet”</li>
+          <li>Deposit in-game tokens - Changed text from &quot;casino wallet&quot; to &quot;in-game wallet&quot;</li>
           <li>General - Updated the backward casino sign</li>
           <li>Keyboard - Added option to bind keys to certain functions</li>
           <li>The car game - Fixed 0 point issue</li>
