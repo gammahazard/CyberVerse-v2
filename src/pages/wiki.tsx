@@ -13,7 +13,7 @@ const Wiki = () => {
         height="100vh"
       >
         <iframe
-          src="https://cyberverse.fandom.com/wiki/Cyberverse_Wiki"
+          src="https://www.cyberversewiki.com/"
           title="Cyberverse Wiki"
           style={{ width: '100%', height: '100%', border: 'none' }}
         ></iframe>

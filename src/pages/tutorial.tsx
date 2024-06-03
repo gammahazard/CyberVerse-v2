@@ -6,30 +6,8 @@ const Tutorial = () => {
   return (
     <Box>
       <Navbar />
-
-      <Box textAlign="center" py={5} bgcolor="#000" color="#fff">
-        <Typography
-          sx={{
-            color: '#FF00FC',
-            fontSize: '96px',
-            fontFamily: '"pixelFont"',
-            fontWeight: 700,
-            lineHeight: '125px',
-          }}
-        >
-          CyberVerse
-        </Typography>
-        <Typography
-          sx={{
-            color: '#fff',
-            fontSize: '60px',
-            fontFamily: '"pixelFont"',
-            fontWeight: 700,
-            lineHeight: '70px',
-          }}
-        >
-          Tutorial
-        </Typography>
+      
+      <Box sx={{ textAlign: 'center', py: 5 }}>
         <Typography
           sx={{
             color: '#FF00FC',
@@ -37,12 +15,23 @@ const Tutorial = () => {
             fontFamily: '"pixelFont"',
             fontWeight: 700,
             lineHeight: '58px',
-            mt: 4,
-            textShadow: '2px 2px 10px #FF00FC',
+            mb: 2,
           }}
         >
-          Coming Soon
+          CyberVerse Tutorial
         </Typography>
+        
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gwSUI3DUtlA"
+            title="CyberVerse Tutorial"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </Box>
       </Box>
 
       <Footer />

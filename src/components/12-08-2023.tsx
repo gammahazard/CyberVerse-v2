@@ -10,13 +10,7 @@ const CyberVerseUpdateDecember132023 = () => {
       <Typography variant="h1" sx={{ marginBottom: '20px', fontSize: { xs: '2rem', sm: '3rem', md: '4rem' } }}>
         CyberVerse Update - December 13, 2023
       </Typography>
-      <Image
-        src="https://static.wikia.nocookie.net/cyberverse/images/a/af/Minttank.png/revision/latest/scale-to-width-down/185?cb=20240225081927"
-        alt="CyberVerse Update - December 13, 2023"
-        width={400}
-        height={233}
-        style={{ borderRadius: '8px', marginBottom: '20px', width: '50%', height: 'auto' }}
-      />
+   
       <Box
         className="article-container"
         sx={{
@@ -30,32 +24,7 @@ const CyberVerseUpdateDecember132023 = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/patch" passHref>
-          <Button
-            variant="outlined"
-            sx={{
-              position: 'absolute',
-              top: '20px',
-              left: '20px',
-              borderColor: '#FF00FC',
-              color: '#FF00FC',
-              fontSize: '20px',
-              fontFamily: 'pixelFont',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '40px',
-              height: '40px',
-              padding: '0',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textDecoration: 'none',
-            }}
-          >
-            <ArrowBackIcon />
-          </Button>
-        </Link>
+       
 
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Update Overview</Typography>
 

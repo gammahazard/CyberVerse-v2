@@ -7,60 +7,50 @@ import { useTheme } from '@mui/material/styles';
 
 const featuresData = [
   {
-    title: "Feature 1",
-    subheading: "Subheading for Feature 1",
+    title: "Features",
+    subheading: "Survival Mechanics",
     description: [
-      "Feature 1 Bullet point 1",
-      "Feature 1 Bullet point 2",
-      "Feature 1 Bullet point 3",
-      "Feature 1 Bullet point 4",
+      <span><a href="https://www.cyberversewiki.com/exploring.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Looting Items</a> - Explore and loot objects to gather valuable items.</span>,
+      <span><a href="https://www.cyberversewiki.com/crafting.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Crafting</a> - Use gathered resources to create new items and enhance existing ones.</span>,
+      <span><a href="https://www.cyberversewiki.com/fishing.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Fishing</a> - Engage in fishing activities to catch various types of fish.</span>,
+      <span><a href="https://www.cyberversewiki.com/gardening.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Farming</a> - Grow and harvest plants to gather resources and earn rewards.</span>,
+      <span><a href="https://www.cyberversewiki.com/oremining.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Mining</a> - Extract precious minerals and resources from different locations.</span>,
+      "Skill level progression: Improve your character's abilities and skills through various in-game activities."
     ],
     image: "/gen2.png"
   },
   {
-    title: "Feature 2",
-    subheading: "Subheading for Feature 2",
+    title: "Economy Gameplay Mechanics",
+    subheading: "Economy Mechanics",
     description: [
-      "Feature 2 Bullet point 1",
-      "Feature 2 Bullet point 2",
-      "Feature 2 Bullet point 3",
-      "Feature 2 Bullet point 4",
+      <span><a href="https://www.cyberversewiki.com/communitymarket.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Community Market</a> - Community market is a place located inside the bank where players can sell or buy in-game items to other players.</span>,
+      "Merchants - Merchants are NPCs that players use to buy certain resources or fulfill merchants' limited daily deals to earn CYPX.",
+      "Sketchy Dealer - Players can sell unlimited in-game items to sketchy dealer at 25% below standard prices, with a 5-25% chance of being scammed for an additional 25% less."
     ],
     image: "/gen3.png"
   },
   {
-    title: "Feature 3",
-    subheading: "Subheading for Feature 3",
+    title: "Minigames Gameplay Mechanics",
+    subheading: "Minigames",
     description: [
-      "Feature 3 Bullet point 1",
-      "Feature 3 Bullet point 2",
-      "Feature 3 Bullet point 3",
-      "Feature 3 Bullet point 4",
+      <span><a href="https://www.cyberversewiki.com/racingminigame.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Racing Cars</a> - Players need to reach the finish line within 2 minutes, avoiding oil puddles and collecting coins, with NFT car behavior influenced by its model.</span>,
+      <span><a href="https://www.cyberversewiki.com/bartender.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Bartender</a> - Serve drinks to customers in a timed mini-game to earn points.</span>,
+      <span><a href="https://www.cyberversewiki.com/djminigame.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>DJ</a> - Players hit the correct notes through five stages to earn points, with skill levels affecting gameplay, consuming 1 stamina per run, and allowing up to 5 runs daily per CyberCitizen.</span>,
+      <span><a href="https://www.cyberversewiki.com/was.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Wolf and Sheep</a> - The game sets the stage for an intense chase where the wolf needs to hunt all the sheep before time runs out, while the sheep must cleverly evade their predator to survive until the countdown expires.</span>
     ],
     image: "/gen2.png"
   },
   {
-    title: "Feature 4",
-    subheading: "Subheading for Feature 4",
+    title: "Other Mechanics",
+    subheading: "Other Mechanics",
     description: [
-      "Feature 4 Bullet point 1",
-      "Feature 4 Bullet point 2",
-      "Feature 4 Bullet point 3",
-      "Feature 4 Bullet point 4",
+      "Daily Quests - Complete daily tasks to earn experience and rewards.",
+      "Monthly Leaderboard - Participate in monthly leaderboard to win prizes by playing minigames or doing any activity such as farming, fishing, looting, and mining ores.",
+      <span><a href="https://www.cyberversewiki.com/cypxmining.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Mining Rigs</a> - Daily tasks to earn experience and rewards.</span>,
+      <span><a href="https://www.cyberversewiki.com/cyberiaestate.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Apartment Customization</a> - Own an NFT apartment, buy or craft furniture, and customize your apartment.</span>
     ],
     image: "/gen3.png"
-  },
-  {
-    title: "Feature 5",
-    subheading: "Subheading for Feature 5",
-    description: [
-      "Feature 5 Bullet point 1",
-      "Feature 5 Bullet point 2",
-      "Feature 5 Bullet point 3",
-      "Feature 5 Bullet point 4",
-    ],
-    image: "/gen2.png"
-  },
+  }
 ];
 
 const Features = () => {
@@ -107,9 +97,9 @@ const Features = () => {
         border: '2px solid #FF00FC',
         borderRadius: '12px',
         padding: isMobile ? '10px' : '20px',
-        position: 'relative', // Ensure positioning context for the arrows
-        minHeight: isMobile ? '700px' : 'auto', // Increase minHeight for mobile
-        height: isMobile ? 'auto' : 'auto' // Set auto height for mobile to ensure content fits
+        position: 'relative',
+        minHeight: isMobile ? '700px' : 'auto',
+        height: isMobile ? 'auto' : 'auto'
       }}
     >
       <Box 
@@ -119,30 +109,30 @@ const Features = () => {
         flexDirection="column"
         alignItems="flex-start"
         order={{ xs: 2, md: 1 }}
-        sx={{ marginBottom: 'auto' }} // Adjusted margin to move content up
+        sx={{ marginBottom: 'auto' }}
       >
         <Typography 
-          variant={isMobile ? "h4" : "h2"} 
+          variant={isMobile ? "h5" : "h4"} 
           gutterBottom 
           align="left"
           style={{
             color: '#E1EBFA',
-            fontSize: isMobile ? '2rem' : '3rem',
+            fontSize: isMobile ? '1.5rem' : '2.5rem',
             fontWeight: 700,
-            marginBottom: '10px', // Adjusted margin to move content up
+            marginBottom: '10px',
           }}
         >
           FEATURES
         </Typography>
         <Typography 
-          variant={isMobile ? "h6" : "h5"} 
+          variant={isMobile ? "body1" : "h6"} 
           gutterBottom 
           align="left"
           style={{
             color: '#FF00FC',
-            fontSize: isMobile ? '1.5rem' : '2rem',
+            fontSize: isMobile ? '1.2rem' : '1.5rem',
             fontWeight: 500,
-            marginBottom: '20px', // Adjusted margin to move content up
+            marginBottom: '20px',
           }}
         >
           {currentFeature.subheading}
@@ -154,13 +144,13 @@ const Features = () => {
               initial={{ opacity: 0, position: 'absolute', width: '100%' }}
               animate={{ opacity: 1, position: 'absolute', width: '100%' }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }} // Increased duration to make the fade more noticeable
+              transition={{ duration: 0.6 }}
             >
               <List>
                 {currentFeature.description.map((point, index) => (
                   <ListItem key={index} sx={{ color: '#E1EBFA', padding: '0' }}>
-                    <ListItemText primaryTypographyProps={{ variant: 'body1', sx: { fontSize: isMobile ? '1rem' : '1.2rem' } }}>
-                      {`• ${point}`}
+                    <ListItemText primaryTypographyProps={{ variant: 'body2', sx: { fontSize: isMobile ? '0.9rem' : '1rem' } }}>
+                      {`• `}{point}
                     </ListItemText>
                   </ListItem>
                 ))}
@@ -184,13 +174,13 @@ const Features = () => {
             width: '100%',
             borderRadius: '8px',
             overflow: 'hidden',
-            height: isMobile ? '400px' : '500px', // Ensure visibility on mobile
+            height: isMobile ? '400px' : '500px',
           }}
         >
           <AnimatePresence initial={false} onExitComplete={handleAnimationComplete}>
             <motion.img
               key={currentFeature.image}
-              src={currentFeature.image} // Path to your image
+              src={currentFeature.image}
               alt="Feature Image"
               style={{
                 width: '100%',
@@ -201,7 +191,7 @@ const Features = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { delay: 0.2 } }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }} // Increased duration to make the fade more noticeable
+              transition={{ duration: 0.6 }}
             />
           </AnimatePresence>
         </Box>

@@ -30,32 +30,7 @@ const DiscoverWorldCyberverse = () => {
           textAlign: 'left',
         }}
       >
-        <Link href="/patch" passHref>
-          <Button
-            variant="outlined"
-            sx={{
-              position: 'absolute',
-              top: '20px',
-              left: '20px',
-              borderColor: '#FF00FC',
-              color: '#FF00FC',
-              fontSize: '20px',
-              fontFamily: 'pixelFont',
-              fontWeight: 700,
-              lineHeight: '26px',
-              width: '40px',
-              height: '40px',
-              padding: '0',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textDecoration: 'none',
-            }}
-          >
-            <ArrowBackIcon />
-          </Button>
-        </Link>
+
         <Typography variant="h3" sx={{ color: '#03a9f4', marginTop: '20px' }}>Introduction</Typography>
         <Typography variant="body1">
           CyberVerse is a vast and immersive world built on the Ergo Blockchain. Explore the possibilities and start

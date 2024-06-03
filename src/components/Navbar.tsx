@@ -16,7 +16,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
   const handleMobileMenuOpen = () => setMobileMenuOpen(true);
   const handleMobileMenuClose = () => setMobileMenuOpen(false);
   const handleRoadmapClick = () => {
-    window.open('https://docs.cyberversegame.io/cyberverseroadmap2024', '_blank', 'noopener,noreferrer');
+    window.open('https://docs.cyberversegame.io/cyberverse-litepaper/roadmap', '_blank', 'noopener,noreferrer');
   };
 
   return (
