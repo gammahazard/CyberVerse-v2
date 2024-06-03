@@ -101,7 +101,7 @@ const Features = () => {
         padding: isMobile ? '10px' : '20px',
         position: 'relative',
         minHeight: isMobile ? '800px' : 'auto',
-        height: isMobile ? 'auto' : 'auto'
+        height: isMobile ? '800px' : 'auto'
       }}
     >
       <Box 
