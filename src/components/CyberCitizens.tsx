@@ -196,24 +196,21 @@ const SectionText = () => {
                     }}
                   />
                 </AnimatePresence>
-                <Box
-                  style={{
-                    position: 'absolute',
-                    bottom: '10px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    padding: '5px 10px',
-                    borderRadius: '8px',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '1.2rem',
-                    width: '80%',
-                    textAlign: 'center',
-                  }}
-                >
-                  {feature.name}
-                </Box>
+              </Box>
+              <Box
+                style={{
+                  marginTop: '10px', // Added marginTop
+                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                  padding: '5px 10px',
+                  borderRadius: '8px',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '1.2rem',
+                  width: '100%',
+                  textAlign: 'center',
+                }}
+              >
+                {feature.name}
               </Box>
             </Box>
           ))}
@@ -221,7 +218,7 @@ const SectionText = () => {
       ) : (
         <Slider {...sliderSettings}>
           {featureData.map((feature, index) => (
-            <Box key={index} style={{ padding: '0 15px', position: 'relative' }}> {/* Adjusted horizontal padding */}
+            <Box key={index} style={{ padding: '0 15px', position: 'relative' }}>
               <Box
                 style={{
                   backgroundColor: 'rgba(0, 0, 0, 0.2)',
@@ -231,7 +228,8 @@ const SectionText = () => {
                   alignItems: 'center',
                   flexDirection: 'column',
                   position: 'relative',
-                  width: '100%',
+                  width: '50%',
+                  marginInline: 'auto',
                   height: '250px',
                 }}
               >
@@ -256,24 +254,23 @@ const SectionText = () => {
                     }}
                   />
                 </AnimatePresence>
-                <Box
-                  style={{
-                    position: 'absolute',
-                    bottom: '10px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    padding: '5px 10px',
-                    borderRadius: '8px',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '1.2rem',
-                    width: '80%',
-                    textAlign: 'center',
-                  }}
-                >
-                  {feature.name}
-                </Box>
+              </Box>
+              <Box
+                style={{
+                  marginTop: '10px', // Added marginTop
+                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                  padding: '5px 10px',
+                  borderRadius: '8px',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '1.2rem',
+                  width: '50%',
+                  marginInline: 'auto',
+               
+                  textAlign: 'center',
+                }}
+              >
+                {feature.name}
               </Box>
             </Box>
           ))}
