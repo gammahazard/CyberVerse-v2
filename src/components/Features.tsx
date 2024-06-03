@@ -17,7 +17,7 @@ const featuresData = [
       <span><a href="https://www.cyberversewiki.com/oremining.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Mining</a> - Extract precious minerals and resources from different locations.</span>,
       "Skill level progression: Improve your character's abilities and skills through various in-game activities."
     ],
-    image: "/gen2.png"
+    image: "/explore.png"
   },
   {
     title: "Economy Gameplay Mechanics",
@@ -27,7 +27,7 @@ const featuresData = [
       "Merchants - Merchants are NPCs that players use to buy certain resources or fulfill merchants' limited daily deals to earn CYPX.",
       "Sketchy Dealer - Players can sell unlimited in-game items to sketchy dealer at 25% below standard prices, with a 5-25% chance of being scammed for an additional 25% less."
     ],
-    image: "/gen3.png"
+    image: "/Community_Market_Interface.webp"
   },
   {
     title: "Minigames Gameplay Mechanics",
@@ -38,7 +38,7 @@ const featuresData = [
       <span><a href="https://www.cyberversewiki.com/djminigame.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>DJ</a> - Players hit the correct notes through five stages to earn points, with skill levels affecting gameplay, consuming 1 stamina per run, and allowing up to 5 runs daily per CyberCitizen.</span>,
       <span><a href="https://www.cyberversewiki.com/was.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Wolf and Sheep</a> - The game sets the stage for an intense chase where the wolf needs to hunt all the sheep before time runs out, while the sheep must cleverly evade their predator to survive until the countdown expires.</span>
     ],
-    image: "/gen2.png"
+    image: "/wolfandsheep.png"
   },
   {
     title: "Other Mechanics",
@@ -49,7 +49,7 @@ const featuresData = [
       <span><a href="https://www.cyberversewiki.com/cypxmining.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Mining Rigs</a> - Daily tasks to earn experience and rewards.</span>,
       <span><a href="https://www.cyberversewiki.com/cyberiaestate.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Apartment Customization</a> - Own an NFT apartment, buy or craft furniture, and customize your apartment.</span>
     ],
-    image: "/gen3.png"
+    image: "/rank.png"
   }
 ];
 
