@@ -59,7 +59,6 @@ const SectionText = () => {
   const [visibleImage5, setVisibleImage5] = useState('/goldencard.webp');
   const [imageIndex5, setImageIndex5] = useState(0);
   const imageArray5 = [
-
     '/goldencard.webp',
     '/platinumcard.webp',
     '/cyberiumcard.webp',
@@ -91,7 +90,7 @@ const SectionText = () => {
     }, 2000);
 
     return () => clearInterval(interval1);
-  }, [imageIndex1]);
+  }, [imageArray1]);
 
   useEffect(() => {
     const interval2 = setInterval(() => {
@@ -100,7 +99,7 @@ const SectionText = () => {
     }, 2000);
 
     return () => clearInterval(interval2);
-  }, [imageIndex2]);
+  }, [imageArray2]);
 
   useEffect(() => {
     const interval3 = setInterval(() => {
@@ -109,7 +108,7 @@ const SectionText = () => {
     }, 2000);
 
     return () => clearInterval(interval3);
-  }, [imageIndex3]);
+  }, [imageArray3]);
 
   useEffect(() => {
     const interval4 = setInterval(() => {
@@ -118,7 +117,7 @@ const SectionText = () => {
     }, 2000);
 
     return () => clearInterval(interval4);
-  }, [imageIndex4]);
+  }, [imageArray4]);
 
   useEffect(() => {
     const interval5 = setInterval(() => {
@@ -127,7 +126,7 @@ const SectionText = () => {
     }, 2000);
 
     return () => clearInterval(interval5);
-  }, [imageIndex5]);
+  }, [imageArray5]);
 
   useEffect(() => {
     const interval6 = setInterval(() => {
@@ -136,7 +135,7 @@ const SectionText = () => {
     }, 2000);
 
     return () => clearInterval(interval6);
-  }, [imageIndex6]);
+  }, [imageArray6]);
 
   useEffect(() => {
     const interval7 = setInterval(() => {
@@ -145,7 +144,7 @@ const SectionText = () => {
     }, 2000);
 
     return () => clearInterval(interval7);
-  }, [imageIndex7]);
+  }, [imageArray7]);
 
   const featureData = [
     { image: visibleImage1, name: 'CyberCitizens' },
