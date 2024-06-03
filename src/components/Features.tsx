@@ -86,7 +86,7 @@ const Features = () => {
       display="flex" 
       width="88%"
       margin="auto"
-      flexDirection={{ xs: 'column', md: 'row' }}  // Changed to column for mobile
+      flexDirection={{ xs: 'row', md: 'row' }} 
       alignItems="center" 
       justifyContent="space-between" 
       fontFamily="pixelFont"
@@ -100,8 +100,8 @@ const Features = () => {
         borderRadius: '12px',
         padding: isMobile ? '10px' : '20px',
         position: 'relative',
-        minHeight: isMobile ? 'auto' : 'auto',  // Adjusted minHeight for mobile
-        height: isMobile ? 'auto' : 'auto' // Adjusted height for mobile
+        minHeight: isMobile ? '700px' : 'auto',
+        height: isMobile ? 'auto' : 'auto'
       }}
     >
       <Box 
@@ -201,9 +201,8 @@ const Features = () => {
       <Box 
         sx={{
           position: 'absolute',
-          bottom: isMobile ? '10px' : '16px',
-          left: isMobile ? '50%' : '16px',
-          transform: isMobile ? 'translateX(-50%)' : 'none', // Center buttons on mobile
+          bottom: 16,
+          left: 16,
           display: 'flex',
           gap: 2,
         }}
