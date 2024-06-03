@@ -1,15 +1,16 @@
 // @ts-ignore
+// @ts-nocheck
 import { Box, Button, Typography } from '@mui/material';
 import { useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import SectionText from '../components/SectionText';
 import CyberCitizens from '../components/CyberCitizens';
 import Features from '../components/Features';
-import Roadmap from '../components/Roadmap';
-import Faq from '../components/Faq';
+
+
 import News from '../components/News';
 import AnimationComponent from '../components/AnimationComponent';
-import NeohubSection from '../components/NeohubSection';
+
 import Footer from '../components/Footer';
 import { useRouter } from 'next/router';
 import { useTheme } from '@mui/material/styles';
