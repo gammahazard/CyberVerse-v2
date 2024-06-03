@@ -12,11 +12,11 @@ const featuresData = [
     title: "Features",
     subheading: "Survival Mechanics",
     description: [
-      <span key="exploring"><a href="https://www.cyberversewiki.com/exploring.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Looting Items</a> - Explore and loot objects to gather valuable items.</span>,
-      <span key="crafting"><a href="https://www.cyberversewiki.com/crafting.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Crafting</a> - Use gathered resources to create new items and enhance existing ones.</span>,
-      <span key="fishing"><a href="https://www.cyberversewiki.com/fishing.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Fishing</a> - Engage in fishing activities to catch various types of fish.</span>,
-      <span key="gardening"><a href="https://www.cyberversewiki.com/gardening.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Farming</a> - Grow and harvest plants to gather resources and earn rewards.</span>,
-      <span key="oremining"><a href="https://www.cyberversewiki.com/oremining.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Mining</a> - Extract precious minerals and resources from different locations.</span>,
+      <span key="exploring"><a href="https://www.cyberversewiki.com/exploring.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Looting Items</a> - Explore and loot objects.</span>,
+      <span key="crafting"><a href="https://www.cyberversewiki.com/crafting.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Crafting</a> - Use gathered resources to create new items/enhance existing ones.</span>,
+      <span key="fishing"><a href="https://www.cyberversewiki.com/fishing.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Fishing</a> - Engage in fishing to catch various types of fish.</span>,
+      <span key="gardening"><a href="https://www.cyberversewiki.com/gardening.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Farming</a> - Grow and harvest plants to gather resources/earn rewards.</span>,
+      <span key="oremining"><a href="https://www.cyberversewiki.com/oremining.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Mining</a> - Extract minerals and resources from different locations.</span>,
       "Skill level progression: Improve your character's abilities and skills through various in-game activities."
     ],
     image: "/explore.png"
