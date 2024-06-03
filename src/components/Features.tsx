@@ -26,8 +26,8 @@ const featuresData = [
     subheading: "Economy Mechanics",
     description: [
       <span key="communitymarket"><a href="https://www.cyberversewiki.com/communitymarket.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Community Market</a> - Community market is a place located inside the bank where players can sell or buy in-game items to other players.</span>,
-      "Merchants - Merchants are NPCs that players use to buy certain resources or fulfill merchants' limited daily deals to earn CYPX.",
-      "Sketchy Dealer - Players can sell unlimited in-game items to sketchy dealer at 25% below standard prices, with a 5-25% chance of being scammed for an additional 25% less."
+      "Merchants - Merchants are NPCs that players use to buy certain resources or fufill deals for CYPX.",
+      "Sketchy Dealer - Players can sell unlimited in-game items to sketchy dealer at 25% below standard prices (5-25% chance of being scammed for an additional 25% less)"
     ],
     image: "/Community_Market_Interface.webp"
   },
@@ -35,10 +35,10 @@ const featuresData = [
     title: "Minigames Gameplay Mechanics",
     subheading: "Minigames",
     description: [
-      <span key="racingminigame"><a href="https://www.cyberversewiki.com/racingminigame.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Racing Cars</a> - Players need to reach the finish line within 2 minutes, avoiding oil puddles and collecting coins, with NFT car behavior influenced by its model.</span>,
+      <span key="racingminigame"><a href="https://www.cyberversewiki.com/racingminigame.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Racing Cars</a> - Players need to reach the finish line within 2 minutes, avoiding oil puddles and collecting coins.</span>,
       <span key="bartender"><a href="https://www.cyberversewiki.com/bartender.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Bartender</a> - Serve drinks to customers in a timed mini-game to earn points.</span>,
-      <span key="djminigame"><a href="https://www.cyberversewiki.com/djminigame.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>DJ</a> - Players hit the correct notes through five stages to earn points, with skill levels affecting gameplay, consuming 1 stamina per run, and allowing up to 5 runs daily per CyberCitizen.</span>,
-      <span key="was"><a href="https://www.cyberversewiki.com/was.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Wolf and Sheep</a> - The game sets the stage for an intense chase where the wolf needs to hunt all the sheep before time runs out, while the sheep must cleverly evade their predator to survive until the countdown expires.</span>
+      <span key="djminigame"><a href="https://www.cyberversewiki.com/djminigame.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>DJ</a> - Players hit the correct notes through five stages to earn points, with skill levels affecting gameplay.</span>,
+      <span key="was"><a href="https://www.cyberversewiki.com/was.html" target="_blank" style={{ textDecoration: 'none', color: '#FF00FC' }}>Wolf and Sheep</a> -The wolf must hunt all the sheep before time runs out, while the sheep must cleverly evade to survive until the countdown ends.</span>
     ],
     image: "/wolfandsheep.png"
   },
