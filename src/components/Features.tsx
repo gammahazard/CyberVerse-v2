@@ -149,16 +149,19 @@ const detailedFeaturesData = [
 const Features = () => {
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNext();
+      if (!isHovered) {
+        handleNext();
+      }
     }, 3000); // 3000ms (3 seconds) interval to match the slider
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
   const handleNext = () => {
     if (!isAnimating) {
@@ -199,9 +202,11 @@ const Features = () => {
         borderRadius: '12px',
         padding: isMobile ? '10px' : '20px',
         position: 'relative',
-        minHeight: isMobile ? '800px' : 'auto',
-        height: isMobile ? '800px' : 'auto'
+        minHeight: isMobile ? '900px' : 'auto', // Increased minHeight for mobile
+        height: 'auto',
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <Box 
         flex={1} 
@@ -275,7 +280,8 @@ const Features = () => {
             width: '100%',
             borderRadius: '8px',
             overflow: 'hidden',
-            height: isMobile ? '400px' : '500px',
+            height: isMobile ? '400px' : '600px', // Increased height for mobile
+            maxWidth: isMobile ? '300px' : '600px' // Added maxWidth to control the aspect ratio
           }}
         >
           <AnimatePresence initial={false} onExitComplete={handleAnimationComplete}>
