@@ -140,7 +140,7 @@ export default function Home() {
       <CyberCitizens />
       <News />
       <Box ref={roadmapRef} />
-      <NeohubSection />
+ 
       <Footer />
     </Box>
   );

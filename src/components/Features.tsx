@@ -92,7 +92,8 @@ const Features = () => {
   return (
     <Box 
       display="flex" 
-      width="90%"
+      width="88%"
+    
       margin="auto"
       flexDirection={{ xs: 'column', md: 'row' }} 
       alignItems="center" 
