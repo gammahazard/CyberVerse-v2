@@ -152,6 +152,14 @@ const Features = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000); // 3000ms (3 seconds) interval to match the slider
+
+    return () => clearInterval(interval);
+  }, []);
+
   const handleNext = () => {
     if (!isAnimating) {
       setIsAnimating(true);
