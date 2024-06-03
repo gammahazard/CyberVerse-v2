@@ -34,15 +34,21 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" justifyContent="center" flexGrow={1}>
         <Box display="flex" alignItems="center" gap={2}>
           <Button
-            onClick={() => window.open('https://docs.cyberversegame.io/whitepaper-v3', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://docs.cyberversegame.io/cyberverse-litepaper', '_blank', 'noopener,noreferrer')}
             className="nav-item"
             sx={{ fontSize: '1.5rem !important' }}
           >
             Litepaper
           </Button>
-          <Link href="/tutorial" passHref>
-            <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Tutorial</Button>
-          </Link>
+          <Button
+            href="https://www.youtube.com/watch?v=gwSUI3DUtlA&embeds_referring_euri=http%3A%2F%2Flocalhost%3A3000%2F&source_ve_path=MzY4NDIsMjg2NjY&feature=emb_logo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-item"
+            sx={{ fontSize: '1.5rem !important' }}
+          >
+            Tutorial
+          </Button>
           <Button
             className="nav-item"
             onClick={handleRoadmapClick}
@@ -101,13 +107,19 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
         >
           <List style={{ alignItems: 'center', textAlign: 'center' }}>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
-              <Link href="/tutorial" passHref>
-                <Typography variant="body1" className="nav-item"  style={{ textDecoration: 'none!important' }}>Tutorial</Typography>
-              </Link>
+              <Button
+                href="https://www.youtube.com/watch?v=gwSUI3DUtlA&embeds_referring_euri=http%3A%2F%2Flocalhost%3A3000%2F&source_ve_path=MzY4NDIsMjg2NjY&feature=emb_logo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-item"
+                sx={{ textDecoration: 'none!important' }}
+              >
+                Tutorial
+              </Button>
             </ListItem>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
               <Link href="/patch" passHref>
-                <Typography variant="body1" className="nav-item"  style={{ textDecoration: 'none' }}>Patch Notes</Typography>
+                <Typography variant="body1" className="nav-item" style={{ textDecoration: 'none' }}>Patch Notes</Typography>
               </Link>
             </ListItem>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
@@ -117,9 +129,8 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
             </ListItem>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
               <Button
-                onClick={() => window.open('https://docs.cyberversegame.io/whitepaper-v3', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://docs.cyberversegame.io/cyberverse-litepaper', '_blank', 'noopener,noreferrer')}
                 className="nav-item"
-     
               >
                 Litepaper
               </Button>
@@ -128,7 +139,6 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
               <Button
                 className="nav-item"
                 onClick={handleRoadmapClick}
-       
               >
                 Roadmap
               </Button>
