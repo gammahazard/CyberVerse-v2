@@ -100,7 +100,7 @@ const Features = () => {
         borderRadius: '12px',
         padding: isMobile ? '10px' : '20px',
         position: 'relative',
-        minHeight: isMobile ? '700px' : 'auto',
+        minHeight: isMobile ? '800px' : 'auto',
         height: isMobile ? 'auto' : 'auto'
       }}
     >
