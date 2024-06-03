@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Box, Typography, IconButton, useMediaQuery, List, ListItem, ListItemText } from '@mui/material';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
