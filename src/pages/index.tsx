@@ -31,14 +31,13 @@ export default function Home() {
 
   return (
     <Box>
-
       <Navbar onRoadmapClick={scrollToRoadmap} />
       <AnimationComponent />
       <Box my={4} sx={{ marginTop: 0, position: 'relative', width: 'auto', height: 'auto', marginInline: 'auto' }}>
         <Box sx={{ position: 'relative' }}>
           <img 
             src="/headerbg.gif" 
-            alt="DePunkz Banner" 
+            alt="CyberVerse Banner" 
             style={{ 
               width: '100%',
               display: 'block',
@@ -51,7 +50,6 @@ export default function Home() {
             sx={{
               position: 'absolute',
               top: 0,
-     
               left: 0,
               width: '100%',
               height: '100%',
@@ -102,13 +100,13 @@ export default function Home() {
                 sx={{
                   backgroundColor: '#FF00FC',
                   color: '#E1EBFA',
-                  fontSize: '20px',
+                  fontSize: { xs: '14px', sm: '16px', md: '20px' }, // Adjusted font size for buttons
                   fontFamily: '"pixelFont"',
                   fontWeight: 700,
                   lineHeight: '26px',
-                  width: '200px',
-                  height: '60px',
-                  marginRight: '25px'
+                  width: { xs: '100px', sm: '180px', md: '200px' }, // Adjusted width for buttons
+                  height: { xs: '50px', sm: '55px', md: '60px' }, // Adjusted height for buttons
+                  marginRight: { xs: '10px', sm: '25px' }, // Adjusted margin-right
                 }}
               >
                 Play Now
@@ -119,12 +117,12 @@ export default function Home() {
                   borderColor: '#FF00FC',
                   backgroundColor: 'rgba(0,0,0,0)',
                   color: '#E1EBFA',
-                  fontSize: '20px',
+                  fontSize: { xs: '14px', sm: '16px', md: '20px' }, // Adjusted font size for buttons
                   fontFamily: '"pixelFont"',
                   fontWeight: 700,
                   lineHeight: '26px',
-                  width: '200px', 
-                  height: '60px',
+                  width: { xs: '100px', sm: '180px', md: '200px' }, // Adjusted width for buttons
+                  height: { xs: '50px', sm: '55px', md: '60px' }, // Adjusted height for buttons
                   outline: 'none',
                 }}
                 onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
@@ -140,7 +138,6 @@ export default function Home() {
       <CyberCitizens />
       <News />
       <Box ref={roadmapRef} />
- 
       <Footer />
     </Box>
   );

@@ -136,7 +136,7 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  height: '100%',
+                  height: '500px', // Fixed height for the cards
                   borderRadius: '8px',
                   overflow: 'hidden',
                 }}
@@ -148,7 +148,13 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
                   alt={news.title}
                   style={{ height: '200px', width: '100%', objectFit: 'cover' }}
                 />
-                <CardContent>
+                <CardContent
+                  style={{
+                    flex: 1,
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                  }}
+                >
                   <Typography variant="h5" component="div" gutterBottom>
                     {news.title}
                   </Typography>

@@ -21,10 +21,10 @@ const featuresData = [
     title: "Feature 2",
     subheading: "Subheading for Feature 2",
     description: [
-      " Feature 2 Bullet point 1",
-      " Feature 2 Bullet point 2",
-      " Feature 2 Bullet point 3",
-      " Feature 2 Bullet point 4",
+      "Feature 2 Bullet point 1",
+      "Feature 2 Bullet point 2",
+      "Feature 2 Bullet point 3",
+      "Feature 2 Bullet point 4",
     ],
     image: "/gen3.png"
   },
@@ -93,22 +93,23 @@ const Features = () => {
     <Box 
       display="flex" 
       width="88%"
-    
       margin="auto"
-      flexDirection={{ xs: 'column', md: 'row' }} 
+      flexDirection={{ xs: 'row', md: 'row' }} 
       alignItems="center" 
       justifyContent="space-between" 
       fontFamily="pixelFont"
       my={4} 
       px={2}
       gap={4}
-      style={{
+      sx={{
         backgroundColor: '#121212',
         marginTop: "15rem",
         border: '2px solid #FF00FC',
         borderRadius: '12px',
         padding: isMobile ? '10px' : '20px',
-        position: 'relative' // Ensure positioning context for the arrows
+        position: 'relative', // Ensure positioning context for the arrows
+        minHeight: isMobile ? '700px' : 'auto', // Increase minHeight for mobile
+        height: isMobile ? 'auto' : 'auto' // Set auto height for mobile to ensure content fits
       }}
     >
       <Box 
@@ -178,12 +179,12 @@ const Features = () => {
         style={{ width: '100%' }}
       >
         <Box
-          style={{
+          sx={{
             position: 'relative',
             width: '100%',
             borderRadius: '8px',
             overflow: 'hidden',
-            height: isMobile ? '300px' : '500px', // Set height on mobile to ensure visibility
+            height: isMobile ? '400px' : '500px', // Ensure visibility on mobile
           }}
         >
           <AnimatePresence initial={false} onExitComplete={handleAnimationComplete}>
