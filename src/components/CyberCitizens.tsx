@@ -201,11 +201,11 @@ const SectionText = () => {
                 style={{
                   marginTop: '10px', // Added marginTop
                   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  padding: '5px 10px',
+                  padding: '10px 20px', // Increased padding for wider container
                   borderRadius: '8px',
                   color: 'white',
                   fontWeight: 'bold',
-                  fontSize: '1.2rem',
+                  fontSize: '1.5rem', // Increased font size for wider text
                   width: '100%',
                   textAlign: 'center',
                 }}
@@ -218,7 +218,7 @@ const SectionText = () => {
       ) : (
         <Slider {...sliderSettings}>
           {featureData.map((feature, index) => (
-            <Box key={index} style={{ padding: '0 15px', position: 'relative' }}>
+            <Box key={index} style={{ padding: '0 30px', position: 'relative' }}> {/* Increased padding for wider container */}
               <Box
                 style={{
                   backgroundColor: 'rgba(0, 0, 0, 0.2)',
@@ -228,9 +228,9 @@ const SectionText = () => {
                   alignItems: 'center',
                   flexDirection: 'column',
                   position: 'relative',
-                  width: '50%',
+                  width: '60%', // Increased width
                   marginInline: 'auto',
-                  height: '250px',
+                  height: '300px', // Increased height for larger images
                 }}
               >
                 <AnimatePresence>
@@ -259,14 +259,13 @@ const SectionText = () => {
                 style={{
                   marginTop: '10px', // Added marginTop
                   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  padding: '5px 10px',
+                  padding: '10px 20px', // Increased padding for wider container
                   borderRadius: '8px',
                   color: 'white',
                   fontWeight: 'bold',
-                  fontSize: '1.2rem',
-                  width: '50%',
+                  fontSize: '1.5rem', // Increased font size for wider text
+                  width: '60%', // Increased width
                   marginInline: 'auto',
-               
                   textAlign: 'center',
                 }}
               >

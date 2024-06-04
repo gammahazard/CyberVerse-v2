@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useTheme } from '@mui/material/styles';
+
 const detailedFeaturesData = [
   {
     title: "Survival Gameplay Mechanics",
@@ -77,7 +78,7 @@ const detailedFeaturesData = [
     description: [
       "Players need to reach the finish line within 2 minutes, avoiding oil puddles and collecting coins, with NFT car behavior influenced by its model."
     ],
-    image: "/cybercar-racing.gif"
+    image: "" // Placeholder image for the racing cars, this will be handled separately
   },
   {
     title: "Minigames Gameplay Mechanics",
@@ -103,7 +104,6 @@ const detailedFeaturesData = [
     ],
     image: "/wolfandsheep.png"
   },
-  
   {
     title: "Other Mechanics",
     subheading: "Monthly Leaderboard",
@@ -112,7 +112,6 @@ const detailedFeaturesData = [
     ],
     image: "/leaderboard.png"
   },
-  
   {
     title: "Other Mechanics",
     subheading: "Apartment Customization",
@@ -123,8 +122,16 @@ const detailedFeaturesData = [
   }
 ];
 
+const carImages = [
+  '/car1.png',
+  '/car2.png',
+  '/car3.png',
+  '/car4.png'
+];
+
 const Features = () => {
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+  const [currentCarImageIndex, setCurrentCarImageIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const theme = useTheme();
@@ -134,6 +141,10 @@ const Features = () => {
     detailedFeaturesData.forEach((feature) => {
       const img = new Image();
       img.src = feature.image;
+    });
+    carImages.forEach((image) => {
+      const img = new Image();
+      img.src = image;
     });
   }, []);
 
@@ -150,6 +161,14 @@ const Features = () => {
 
     return () => clearInterval(interval);
   }, [isHovered]);
+
+  useEffect(() => {
+    const carImageInterval = setInterval(() => {
+      setCurrentCarImageIndex((prevIndex) => (prevIndex + 1) % carImages.length);
+    }, 2000); // 2000ms (2 seconds) interval for car images
+
+    return () => clearInterval(carImageInterval);
+  }, []);
 
   const handleNext = () => {
     if (!isAnimating) {
@@ -273,21 +292,39 @@ const Features = () => {
           }}
         >
           <AnimatePresence initial={false} onExitComplete={handleAnimationComplete}>
-            <motion.img
-              key={currentFeature.image}
-              src={currentFeature.image}
-              alt="Feature Image"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                position: 'absolute',
-              }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
-            />
+            {currentFeature.subheading === "Racing Cars" ? (
+              <motion.img
+                key={carImages[currentCarImageIndex]}
+                src={carImages[currentCarImageIndex]}
+                alt="Racing Car"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  position: 'absolute',
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+              />
+            ) : (
+              <motion.img
+                key={currentFeature.image}
+                src={currentFeature.image}
+                alt="Feature Image"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  position: 'absolute',
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+              />
+            )}
           </AnimatePresence>
         </Box>
       </Box>
