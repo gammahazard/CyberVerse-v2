@@ -203,7 +203,7 @@ const Features = () => {
       px={2}
       gap={4}
       sx={{
-        backgroundColor: '#121212',
+        backgroundColor: 'rgb(0, 0, 0, 0.5)',
         marginTop: "15rem",
         border: '2px solid #FF00FC',
         borderRadius: '12px',

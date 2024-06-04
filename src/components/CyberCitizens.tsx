@@ -321,7 +321,7 @@ const SectionText = () => {
                     <Box
                       sx={{
                         height: '30%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backgroundColor: 'rgba(0, 0, 0, 1)',
                         padding: '10px 20px',
                         color: 'white',
                         fontWeight: 'bold',
