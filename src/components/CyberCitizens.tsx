@@ -1,6 +1,6 @@
 // @ts-ignore
 // @ts-nocheck
-import { Box, useMediaQuery } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import Slider from 'react-slick';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -82,6 +82,37 @@ const SectionText = () => {
     '/frog.png',
   ];
 
+  const [loading, setLoading] = useState(true);
+
+  const preloadImages = (images, callback) => {
+    let loadedImages = 0;
+    const totalImages = images.length;
+
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === totalImages) {
+          callback();
+        }
+      };
+    });
+  };
+
+  useEffect(() => {
+    const allImages = [
+      ...imageArray1,
+      ...imageArray2,
+      ...imageArray3,
+      ...imageArray4,
+      ...imageArray5,
+      ...imageArray6,
+      ...imageArray7,
+    ];
+    preloadImages(allImages, () => setLoading(false));
+  }, []);
+
   // Define interval logic for each feature
   useEffect(() => {
     const interval1 = setInterval(() => {
@@ -158,141 +189,156 @@ const SectionText = () => {
 
   return (
     <Box p={2} maxWidth="90%" margin="auto" style={{ marginTop: '15rem' }}>
-      {isMobile ? (
-        <Box display="flex" flexDirection="column" gap={4}>
-          {featureData.map((feature, index) => (
-            <Box key={index} style={{ position: 'relative' }}>
-              <Box
-                sx={{
-                  backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  position: 'relative',
-                  width: '100%',
-                  height: '400px', // Increased height
-                  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-                  overflow: 'hidden',
-                  justifyContent: 'center',
-                  border: '2px solid #FF00FC',
-                }}
-              >
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '70%',
-                    backgroundColor: '#000',
-                    padding: '10px', // Added padding to ensure no overlap
-                    width: '100%',
-                    position: 'relative',
-                  }}
-                >
-                  <AnimatePresence>
-                    <motion.img
-                      key={feature.image}
-                      src={feature.image}
-                      alt={feature.name}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                      style={{
-                        maxWidth: '100%',
-                        maxHeight: '100%',
-                        objectFit: 'contain',
-                        position: 'absolute',
-                      }}
-                    />
-                  </AnimatePresence>
-                </Box>
-                <Box
-                  sx={{
-                    height: '30%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    padding: '10px 20px',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '1.5rem',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  {feature.name}
-                </Box>
-              </Box>
-            </Box>
-          ))}
+      {loading ? (
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          height="400px"
+        >
+          <Typography variant="h4" style={{ color: 'white' }}>
+            Loading...
+          </Typography>
         </Box>
       ) : (
-        <Slider {...sliderSettings}>
-          {featureData.map((feature, index) => (
-            <Box key={index} sx={{ padding: '0 15px', position: 'relative' }}>
-              <Box
-                sx={{
-                  backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  position: 'relative',
-                  width: '100%',
-                  height: '400px', // Increased height
-                  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-                  overflow: 'hidden',
-                  border: '2px solid #FF00FC',
-                }}
-              >
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '70%',
-                    backgroundColor: '#000',
-                    padding: '10px', // Added padding to ensure no overlap
-                    width: '100%',
-                    position: 'relative',
-                  }}
-                >
-                  <AnimatePresence>
-                    <motion.img
-                      key={feature.image}
-                      src={feature.image}
-                      alt={feature.name}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                      style={{
-                        maxWidth: '100%',
-                        maxHeight: '100%',
-                        objectFit: 'contain',
-                        position: 'absolute',
+        <>
+          {isMobile ? (
+            <Box display="flex" flexDirection="column" gap={4}>
+              {featureData.map((feature, index) => (
+                <Box key={index} style={{ position: 'relative' }}>
+                  <Box
+                    sx={{
+                      backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                      borderRadius: '8px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      position: 'relative',
+                      width: '100%',
+                      height: '400px', // Increased height
+                      boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+                      overflow: 'hidden',
+                      justifyContent: 'center',
+                      border: '2px solid #FF00FC',
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '70%',
+                        backgroundColor: '#000',
+                        padding: '10px', // Added padding to ensure no overlap
+                        width: '100%',
+                        position: 'relative',
                       }}
-                    />
-                  </AnimatePresence>
+                    >
+                      <AnimatePresence>
+                        <motion.img
+                          key={feature.image}
+                          src={feature.image}
+                          alt={feature.name}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.5 }}
+                          style={{
+                            maxWidth: '100%',
+                            maxHeight: '100%',
+                            objectFit: 'contain',
+                            position: 'absolute',
+                          }}
+                        />
+                      </AnimatePresence>
+                    </Box>
+                    <Box
+                      sx={{
+                        height: '30%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        padding: '10px 20px',
+                        color: 'white',
+                        fontWeight: 'bold',
+                        fontSize: '1.5rem',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      {feature.name}
+                    </Box>
+                  </Box>
                 </Box>
-                <Box
-                  sx={{
-                    height: '30%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    padding: '10px 20px',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '1.5rem',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  {feature.name}
-                </Box>
-              </Box>
+              ))}
             </Box>
-          ))}
-        </Slider>
+          ) : (
+            <Slider {...sliderSettings}>
+              {featureData.map((feature, index) => (
+                <Box key={index} sx={{ padding: '0 15px', position: 'relative' }}>
+                  <Box
+                    sx={{
+                      backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                      borderRadius: '8px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      position: 'relative',
+                      width: '100%',
+                      height: '400px', // Increased height
+                      boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+                      overflow: 'hidden',
+                      border: '2px solid #FF00FC',
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '70%',
+                        backgroundColor: '#000',
+                        padding: '10px', // Added padding to ensure no overlap
+                        width: '100%',
+                        position: 'relative',
+                      }}
+                    >
+                      <AnimatePresence>
+                        <motion.img
+                          key={feature.image}
+                          src={feature.image}
+                          alt={feature.name}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.5 }}
+                          style={{
+                            maxWidth: '100%',
+                            maxHeight: '100%',
+                            objectFit: 'contain',
+                            position: 'absolute',
+                          }}
+                        />
+                      </AnimatePresence>
+                    </Box>
+                    <Box
+                      sx={{
+                        height: '30%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        padding: '10px 20px',
+                        color: 'white',
+                        fontWeight: 'bold',
+                        fontSize: '1.5rem',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      {feature.name}
+                    </Box>
+                  </Box>
+                </Box>
+              ))}
+            </Slider>
+          )}
+        </>
       )}
     </Box>
   );

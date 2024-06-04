@@ -230,7 +230,7 @@ const Features = () => {
           align="left"
           style={{
             color: '#E1EBFA',
-            fontSize: isMobile ? '1.7rem' : '3rem',
+            fontSize: isMobile ? '1.5rem' : '3rem',
             fontWeight: 700,
             marginBottom: '10px',
           }}
@@ -243,7 +243,7 @@ const Features = () => {
           align="left"
           style={{
             color: '#FF00FC',
-            fontSize: isMobile ? '1.5rem' : '2.5rem',
+            fontSize: isMobile ? '1.3rem' : '2.5rem',
             fontWeight: 500,
             marginBottom: '20px',
           }}
@@ -262,7 +262,7 @@ const Features = () => {
               <List>
                 {currentFeature.description.map((point, index) => (
                   <ListItem key={index} sx={{ color: '#E1EBFA', padding: '0' }}>
-                    <ListItemText primaryTypographyProps={{ variant: 'body2', sx: { fontSize: isMobile ? '1.2rem' : '2rem' } }}>
+                    <ListItemText primaryTypographyProps={{ variant: 'body2', sx: { fontSize: isMobile ? '.9rem' : '2rem' } }}>
                       {`• `}{point}
                     </ListItemText>
                   </ListItem>
