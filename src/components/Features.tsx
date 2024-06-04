@@ -1,12 +1,11 @@
 // @ts-ignore
 // @ts-nocheck
 import { Box, Typography, IconButton, useMediaQuery, List, ListItem, ListItemText } from '@mui/material';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useTheme } from '@mui/material/styles';
-
 const detailedFeaturesData = [
   {
     title: "Survival Gameplay Mechanics",
@@ -153,12 +152,23 @@ const Features = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  const preloadImages = useCallback(() => {
+    detailedFeaturesData.forEach((feature) => {
+      const img = new Image();
+      img.src = feature.image;
+    });
+  }, []);
+
+  useEffect(() => {
+    preloadImages();
+  }, [preloadImages]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isHovered) {
         handleNext();
       }
-    }, 3000); // 3000ms (3 seconds) interval to match the slider
+    }, 6000); // 6000ms (6 seconds) interval
 
     return () => clearInterval(interval);
   }, [isHovered]);
@@ -296,7 +306,7 @@ const Features = () => {
                 position: 'absolute',
               }}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { delay: 0.2 } }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
             />
