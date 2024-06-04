@@ -163,54 +163,65 @@ const SectionText = () => {
           {featureData.map((feature, index) => (
             <Box key={index} style={{ position: 'relative' }}>
               <Box
-                style={{
+                sx={{
                   backgroundColor: 'rgba(0, 0, 0, 0.2)',
                   borderRadius: '8px',
                   display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
                   flexDirection: 'column',
                   position: 'relative',
                   width: '100%',
-                  height: '250px',
+                  height: '400px', // Increased height
+                  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+                  overflow: 'hidden',
+                  justifyContent: 'center',
+                  border: '2px solid #FF00FC',
                 }}
               >
-                <AnimatePresence>
-                  <motion.img
-                    key={feature.image}
-                    src={feature.image}
-                    alt={feature.name}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '100%',
-                      width: 'auto',
-                      height: 'auto',
-                      fontFamily: 'pixelFont',
-                      borderRadius: '8px',
-                      objectFit: 'contain',
-                      position: 'absolute',
-                    }}
-                  />
-                </AnimatePresence>
-              </Box>
-              <Box
-                style={{
-                  marginTop: '10px', // Added marginTop
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  padding: '10px 20px', // Increased padding for wider container
-                  borderRadius: '8px',
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontSize: '1.5rem', // Increased font size for wider text
-                  width: '100%',
-                  textAlign: 'center',
-                }}
-              >
-                {feature.name}
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '70%',
+                    backgroundColor: '#000',
+                    padding: '10px', // Added padding to ensure no overlap
+                    width: '100%',
+                    position: 'relative',
+                  }}
+                >
+                  <AnimatePresence>
+                    <motion.img
+                      key={feature.image}
+                      src={feature.image}
+                      alt={feature.name}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        objectFit: 'contain',
+                        position: 'absolute',
+                      }}
+                    />
+                  </AnimatePresence>
+                </Box>
+                <Box
+                  sx={{
+                    height: '30%',
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    padding: '10px 20px',
+                    color: 'white',
+                    fontWeight: 'bold',
+                    fontSize: '1.5rem',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  {feature.name}
+                </Box>
               </Box>
             </Box>
           ))}
@@ -218,58 +229,66 @@ const SectionText = () => {
       ) : (
         <Slider {...sliderSettings}>
           {featureData.map((feature, index) => (
-            <Box key={index} style={{ padding: '0 30px', position: 'relative' }}> {/* Increased padding for wider container */}
+            <Box key={index} sx={{ padding: '0 15px', position: 'relative' }}>
               <Box
-                style={{
+                sx={{
                   backgroundColor: 'rgba(0, 0, 0, 0.2)',
                   borderRadius: '8px',
                   display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
                   flexDirection: 'column',
                   position: 'relative',
-                  width: '60%', // Increased width
-                  marginInline: 'auto',
-                  height: '300px', // Increased height for larger images
+                  width: '100%',
+                  height: '400px', // Increased height
+                  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+                  overflow: 'hidden',
+                  border: '2px solid #FF00FC',
                 }}
               >
-                <AnimatePresence>
-                  <motion.img
-                    key={feature.image}
-                    src={feature.image}
-                    alt={feature.name}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '100%',
-                      width: 'auto',
-                      height: 'auto',
-                      fontFamily: 'pixelFont',
-                      borderRadius: '8px',
-                      objectFit: 'contain',
-                      position: 'absolute',
-                    }}
-                  />
-                </AnimatePresence>
-              </Box>
-              <Box
-                style={{
-                  marginTop: '10px', // Added marginTop
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  padding: '10px 20px', // Increased padding for wider container
-                  borderRadius: '8px',
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontSize: '1.5rem', // Increased font size for wider text
-                  width: '60%', // Increased width
-                  marginInline: 'auto',
-                  textAlign: 'center',
-                }}
-              >
-                {feature.name}
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '70%',
+                    backgroundColor: '#000',
+                    padding: '10px', // Added padding to ensure no overlap
+                    width: '100%',
+                    position: 'relative',
+                  }}
+                >
+                  <AnimatePresence>
+                    <motion.img
+                      key={feature.image}
+                      src={feature.image}
+                      alt={feature.name}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        objectFit: 'contain',
+                        position: 'absolute',
+                      }}
+                    />
+                  </AnimatePresence>
+                </Box>
+                <Box
+                  sx={{
+                    height: '30%',
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    padding: '10px 20px',
+                    color: 'white',
+                    fontWeight: 'bold',
+                    fontSize: '1.5rem',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  {feature.name}
+                </Box>
               </Box>
             </Box>
           ))}
