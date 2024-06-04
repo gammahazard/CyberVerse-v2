@@ -14,7 +14,7 @@ const detailedFeaturesData = [
     description: [
       "Explore and loot objects to gather valuable items."
     ],
-    image: "/explore.png"
+    image: "/looting.gif"
   },
   {
     title: "Survival Gameplay Mechanics",
@@ -22,7 +22,7 @@ const detailedFeaturesData = [
     description: [
       "Use gathered resources to create new items and enhance existing ones."
     ],
-    image: "/crafting.png"
+    image: "/crafting.gif"
   },
   {
     title: "Survival Gameplay Mechanics",
@@ -30,7 +30,7 @@ const detailedFeaturesData = [
     description: [
       "Engage in fishing activities to catch various types of fish."
     ],
-    image: "/fishing.png"
+    image: "/fishing.gif"
   },
   {
     title: "Survival Gameplay Mechanics",
@@ -38,7 +38,7 @@ const detailedFeaturesData = [
     description: [
       "Grow and harvest plants to gather resources and earn rewards."
     ],
-    image: "/farming.png"
+    image: "/farming.gif"
   },
   {
     title: "Survival Gameplay Mechanics",
@@ -46,7 +46,7 @@ const detailedFeaturesData = [
     description: [
       "Extract precious minerals and resources from different locations."
     ],
-    image: "/mining.png"
+    image: "/mining.gif"
   },
   {
     title: "Survival Gameplay Mechanics",
@@ -54,7 +54,7 @@ const detailedFeaturesData = [
     description: [
       "Improve your character's abilities and skills through various in-game activities."
     ],
-    image: "/skill_level.png"
+    image: "/skill.png"
   },
   {
     title: "Economy Gameplay Mechanics",
@@ -62,7 +62,7 @@ const detailedFeaturesData = [
     description: [
       "Community market is a place located inside the bank where players can sell or buy in-game items to other players."
     ],
-    image: "/community_market.png"
+    image: "/community-market.gif"
   },
   {
     title: "Economy Gameplay Mechanics",
@@ -70,7 +70,7 @@ const detailedFeaturesData = [
     description: [
       "Merchants are NPCs that players use to buy certain resources or fulfill merchants' limited daily deals to earn CYPX."
     ],
-    image: "/merchants.png"
+    image: "/merchants.gif"
   },
   {
     title: "Economy Gameplay Mechanics",
@@ -78,7 +78,7 @@ const detailedFeaturesData = [
     description: [
       "Players can sell unlimited in-game items to sketchy dealer at 25% below standard prices, with a 5-25% chance of being scammed for an additional 25% less."
     ],
-    image: "/sketchy_dealer.png"
+    image: "/sketchy_dealer.gif"
   },
   {
     title: "Minigames Gameplay Mechanics",
@@ -86,7 +86,7 @@ const detailedFeaturesData = [
     description: [
       "Players need to reach the finish line within 2 minutes, avoiding oil puddles and collecting coins, with NFT car behavior influenced by its model."
     ],
-    image: "/racing_cars.png"
+    image: "/cybercar-racing.gif"
   },
   {
     title: "Minigames Gameplay Mechanics",
@@ -94,7 +94,7 @@ const detailedFeaturesData = [
     description: [
       "Serve drinks to customers in a timed mini-game to earn points."
     ],
-    image: "/bartender.png"
+    image: "/bartender.gif"
   },
   {
     title: "Minigames Gameplay Mechanics",
@@ -102,7 +102,7 @@ const detailedFeaturesData = [
     description: [
       "Players hit the correct notes through five stages to earn points, with skill levels affecting gameplay, consuming 1 stamina per run, and allowing up to 5 runs daily per CyberCitizen."
     ],
-    image: "/dj.png"
+    image: "/dj.gif"
   },
   {
     title: "Minigames Gameplay Mechanics",
@@ -110,7 +110,7 @@ const detailedFeaturesData = [
     description: [
       "The game sets the stage for an intense chase where the wolf needs to hunt all the sheep before time runs out, while the sheep must cleverly evade their predator to survive until the countdown expires."
     ],
-    image: "/wolf_and_sheep.png"
+    image: "/wolfandsheep.png"
   },
   {
     title: "Other Mechanics",
@@ -118,7 +118,7 @@ const detailedFeaturesData = [
     description: [
       "Complete daily tasks to earn experience and rewards."
     ],
-    image: "/daily_quests.png"
+    image: "/daily_quests.gif"
   },
   {
     title: "Other Mechanics",
@@ -126,7 +126,7 @@ const detailedFeaturesData = [
     description: [
       "Participate in monthly leaderboard to win prizes by playing minigames or doing any activity such as farming, fishing, looting and mining ores."
     ],
-    image: "/monthly_leaderboard.png"
+    image: "/leaderboard.png"
   },
   {
     title: "Other Mechanics",
@@ -134,7 +134,7 @@ const detailedFeaturesData = [
     description: [
       "Daily tasks to earn experience and rewards."
     ],
-    image: "/mining_rigs.png"
+    image: "/mining_rigs.gif"
   },
   {
     title: "Other Mechanics",
@@ -142,7 +142,7 @@ const detailedFeaturesData = [
     description: [
       "Own an NFT apartment, buy or craft furniture and customize your apartment."
     ],
-    image: "/apartment_customization.png"
+    image: "/apart-penthouse.webp"
   }
 ];
 
