@@ -56,12 +56,20 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
           >
             Roadmap
           </Button>
-          <Link href="/patch" passHref>
-            <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Patch Notes</Button>
-          </Link>
-          <Link href="/wiki" passHref>
-            <Button className="nav-item" sx={{ fontSize: '1.5rem !important' }}>Wiki</Button>
-          </Link>
+          <Button
+            onClick={() => window.open('https://cyberversewiki.com/updates.html', '_blank', 'noopener,noreferrer')}
+            className="nav-item"
+            sx={{ fontSize: '1.5rem !important' }}
+          >
+            Patch Notes
+          </Button>
+          <Button
+            onClick={() => window.open('https://cyberversewiki.com/index.html', '_blank', 'noopener,noreferrer')}
+            className="nav-item"
+            sx={{ fontSize: '1.5rem !important' }}
+          >
+            Wiki
+          </Button>
         </Box>
       </Box>
 
@@ -118,14 +126,22 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
               </Button>
             </ListItem>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
-              <Link href="/patch" passHref>
-                <Typography variant="body1" className="nav-item" style={{ textDecoration: 'none' }}>Patch Notes</Typography>
-              </Link>
+              <Button
+                onClick={() => window.open('https://cyberversewiki.com/updates.html', '_blank', 'noopener,noreferrer')}
+                className="nav-item"
+                sx={{ textDecoration: 'none!important' }}
+              >
+                Patch Notes
+              </Button>
             </ListItem>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
-              <Link href="/wiki" passHref>
-                <Typography variant="body1" className="nav-item" style={{ textDecoration: 'none' }}>Wiki</Typography>
-              </Link>
+              <Button
+                onClick={() => window.open('https://cyberversewiki.com/index.html', '_blank', 'noopener,noreferrer')}
+                className="nav-item"
+                sx={{ textDecoration: 'none!important' }}
+              >
+                Wiki
+              </Button>
             </ListItem>
             <ListItem button onClick={handleMobileMenuClose} style={{ justifyContent: 'center' }}>
               <Button
