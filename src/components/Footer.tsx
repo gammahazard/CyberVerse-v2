@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Link from 'next/link';
 
 const Footer: React.FC = () => {
   const theme = useTheme();
@@ -16,25 +15,26 @@ const Footer: React.FC = () => {
 
       <Box sx={styles.linksContainer}>
         <Box sx={styles.menuItemBox}>
-   
         </Box>
 
         <Box sx={styles.menuItemBox}>
-          <Link href="/wiki" passHref>
-            <Typography component="a" sx={styles.menuItem}>
-              Wiki
-            </Typography>
-          </Link>
+          <Typography
+            component="a"
+            sx={styles.menuItem}
+            onClick={() => window.open('https://cyberversewiki.com/index.html', '_blank', 'noopener,noreferrer')}
+          >
+            Wiki
+          </Typography>
         </Box>
 
-  
-
         <Box sx={styles.menuItemBox}>
-          <Link href="/patch" passHref>
-            <Typography component="p" sx={styles.menuItem}>
-             Patch Notes
-            </Typography>
-          </Link>
+          <Typography
+            component="a"
+            sx={styles.menuItem}
+            onClick={() => window.open('https://cyberversewiki.com/updates.html', '_blank', 'noopener,noreferrer')}
+          >
+            Patch Notes
+          </Typography>
         </Box>
       </Box>
     </Box>
@@ -48,7 +48,6 @@ const styles = {
     alignItems: 'flex-start',
     backgroundColor: '#000C56',
     color: '#E1EBFA',
-   
     padding: '20px 40px',
     position: 'relative',
     bottom: 0,
@@ -60,7 +59,6 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
     padding: '20px 10px',
-   
   },
 
   title: {
@@ -76,7 +74,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-end',
-  
   },
 
   menuItemBox: {
@@ -95,8 +92,7 @@ const styles = {
 
   menuItemWithWeight: {
     fontSize: '18px',
-    fontWeight:0,
-   
+    fontWeight: 0,
     color: '#E1EBFA',
     cursor: 'pointer',
     textDecoration: 'none',
