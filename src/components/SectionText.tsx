@@ -65,22 +65,22 @@ const SectionText = () => {
             PLAY FOR FREE
           </Button>
           <Button 
-                onClick={() => router.push('/wiki')}
-                variant="outlined"
-                sx={{
-                  borderColor: '#FF00FC',
-                  color: '#FF00FC',
-                  fontSize: '20px',
-                  fontFamily: '"pixelFont"',
-                  fontWeight: 700,
-                  lineHeight: '26px',
-                  width: '50%', // Adjusted width to match the other button
-                  height: '60px',
-                  outline: 'none',
-                }}
-              >
-                EXPLORE WIKI
-              </Button>
+  onClick={() => window.open('https://cyberversewiki.com/index.html', '_blank', 'noopener,noreferrer')}
+  variant="outlined"
+  sx={{
+    borderColor: '#FF00FC',
+    color: '#FF00FC',
+    fontSize: '20px',
+    fontFamily: '"pixelFont"',
+    fontWeight: 700,
+    lineHeight: '26px',
+    width: '50%', // Adjusted width to match the other button
+    height: '60px',
+    outline: 'none',
+  }}
+>
+  EXPLORE WIKI
+</Button>
         </Box>
       </Box>
       <Box 
