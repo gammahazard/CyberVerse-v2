@@ -51,12 +51,11 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
     {
       id: 3,
       title: 'CyberVerse x Omen partnership announced!',
-      content: `In the coming weeks, we'll be bringing Omen into CyberVerse! Omen is a self sustaining ecosystem on Cardano. http://nemonium.com/`,
+      content: `In the coming weeks, we'll be bringing Omen into CyberVerse! Omen is a self-sustaining ecosystem on Cardano. http://nemonium.com/`,
       datePublished: 'May 14, 2024',
       imageUrl: '/omen-cyberverse.jpg',
       tweetId: '1790505806783185370', // ID of the tweet to embed
     },
-
     {
       id: 4,
       title: 'Community market surpasses 5 million $CYPX trading volume!',
@@ -65,7 +64,6 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
       imageUrl: '/marketplace-volume.jpg',
       tweetId: '1793301080761385145', // ID of the tweet to embed
     },
- 
     {
       id: 5,
       title: 'Rising Player Counts',
@@ -82,14 +80,25 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
       imageUrl: '/wiki.png',
       tweetId: '1795414078510223496'
     },
+    {
+      id: 7,
+      title: 'CyberCars coming to Cardano',
+      content: 'First CyberCar NFTs are coming to Cardano this august, stay tuned for more info!',
+      datePublished: 'July 30, 2024',
+      imageUrl: '/cars.webp',
+      tweetId: '1818425259848339651'
+    },
   ];
 
+  // Sort news items by datePublished in descending order (most recent first)
+  const sortedNewsItems = newsItems.sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
+
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 3) % newsItems.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 3) % sortedNewsItems.length);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 3 + newsItems.length) % newsItems.length);
+    setCurrentIndex((prevIndex) => (prevIndex - 3 + sortedNewsItems.length) % sortedNewsItems.length);
   };
 
   return (
@@ -127,7 +136,7 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
           <ArrowBackIosIcon style={{ color: '#E1EBFA' }} />
         </IconButton>
         <Grid container spacing={2} justifyContent="center">
-          {newsItems.slice(currentIndex, currentIndex + 3).map((news) => (
+          {sortedNewsItems.slice(currentIndex, currentIndex + 3).map((news) => (
             <Grid item xs={12} sm={6} md={4} key={news.id}>
               <Card
                 style={{
