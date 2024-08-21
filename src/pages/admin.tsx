@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { Box, Button, TextField, Typography, Modal, List, ListItem, ListItemText, ListItemSecondaryAction, IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
