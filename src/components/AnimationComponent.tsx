@@ -1,5 +1,6 @@
 import styles from '../styles/animations.module.scss';
 
+
 const AnimationComponent = () => {
   return (
     <div className={styles.container}>
