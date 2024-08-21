@@ -1,26 +1,36 @@
-// @ts-ignore
+import React, { useState, useEffect } from 'react';
 import { Box, Typography, Card, CardContent, CardMedia, IconButton, Modal, Grid, Link } from '@mui/material';
-import { useState } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 
-// Define the type for news items
-interface NewsItem {
-  id: number;
-  title: string;
-  content: string;
-  datePublished: string;
-  imageUrl: string;
-  tweetId?: string; // Optional field for tweet ID
-}
-
 const News = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
+  const [selectedNews, setSelectedNews] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [newsItems, setNewsItems] = useState([]);
 
-  const handleOpenModal = (news: NewsItem) => {
+  const API_URL = process.env.NEXT_PUBLIC_NEWS_API_URL;
+
+  useEffect(() => {
+    fetchNewsItems();
+  }, []);
+
+  const fetchNewsItems = async () => {
+    try {
+      const response = await fetch(`${API_URL}/news`);
+      if (response.ok) {
+        const data = await response.json();
+        setNewsItems(data);
+      } else {
+        console.error('Failed to fetch news items');
+      }
+    } catch (error) {
+      console.error('Error fetching news items:', error);
+    }
+  };
+
+  const handleOpenModal = (news) => {
     setSelectedNews(news);
     setOpenModal(true);
   };
@@ -29,77 +39,16 @@ const News = () => {
     setOpenModal(false);
   };
 
-  const newsItems: NewsItem[] = [
-    {
-      id: 1,
-      title: 'CyberVerse Town Hall Announcement!',
-      content: 'Join @kilver_erg and @sisyphuspush for our community town hall on coming up on Sunday June 2nd!',
-      datePublished: 'May 31, 2024',
-      imageUrl: '/townhall.jpg',
-      tweetId: '1796294872074457352'
-    },
-    {
-      id: 2,
-      title: 'CyberVerse x House of Titans partnership announced!',
-      content: `We're excited to announce our partnership with House of Titans! 
-
-House of Titans is a digital collectibles project with a utility-driven, gamification-focused approach on the Cardano blockchain!`,
-      datePublished: 'May 31, 2024',
-      imageUrl: '/titan-cyberverse.png',
-      tweetId: '1794383208554877128', // ID of the tweet to embed
-    },
-    {
-      id: 3,
-      title: 'CyberVerse x Omen partnership announced!',
-      content: `In the coming weeks, we'll be bringing Omen into CyberVerse! Omen is a self-sustaining ecosystem on Cardano. http://nemonium.com/`,
-      datePublished: 'May 14, 2024',
-      imageUrl: '/omen-cyberverse.jpg',
-      tweetId: '1790505806783185370', // ID of the tweet to embed
-    },
-    {
-      id: 4,
-      title: 'Community market surpasses 5 million $CYPX trading volume!',
-      content: `Our community market has surpassed the 5,000,000 $CYPX in trading volume, which is equivalent to 6.2k Ergo at current CYPX price! Thanks to everyone for supporting CyberVerse, and let's keep the momentum going!`,
-      datePublished: 'May 22, 2024',
-      imageUrl: '/marketplace-volume.jpg',
-      tweetId: '1793301080761385145', // ID of the tweet to embed
-    },
-    {
-      id: 5,
-      title: 'Rising Player Counts',
-      content: 'Our daily average number of active players is showing an upward trend, we are now averaging between 60-70 active players online every day!',
-      datePublished: 'May 28, 2024',
-      imageUrl: '/player-count.jpg',
-      tweetId: '1795539702898163735'
-    },
-    {
-      id: 6,
-      title: 'CyberVerse Wiki Website Announced',
-      content: 'The CyberVerse Wiki now has its own website, found at cyberversewiki.com! special thanks to @lexim0n',
-      datePublished: 'May 28, 2024',
-      imageUrl: '/wiki.png',
-      tweetId: '1795414078510223496'
-    },
-    {
-      id: 7,
-      title: 'CyberCars coming to Cardano',
-      content: 'First CyberCar NFTs are coming to Cardano this august, stay tuned for more info!',
-      datePublished: 'July 30, 2024',
-      imageUrl: '/cars.webp',
-      tweetId: '1818425259848339651'
-    },
-  ];
-
-  // Sort news items by datePublished in descending order (most recent first)
-  const sortedNewsItems = newsItems.sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
-
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 3) % sortedNewsItems.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 3) % newsItems.length);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 3 + sortedNewsItems.length) % sortedNewsItems.length);
+    setCurrentIndex((prevIndex) => (prevIndex - 3 + newsItems.length) % newsItems.length);
   };
+
+  // Sort news items by datePublished in descending order (most recent first)
+  const sortedNewsItems = newsItems.sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
 
   return (
     <Box
@@ -145,7 +94,7 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  height: '500px', // Fixed height for the cards
+                  height: '500px',
                   borderRadius: '8px',
                   overflow: 'hidden',
                 }}

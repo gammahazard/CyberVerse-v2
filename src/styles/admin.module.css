@@ -1,0 +1,71 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #e1ebfa;
+    min-height: 100vh;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ff00fc;
+  }
+  
+  .loginForm {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button {
+    background-color: #ff00fc;
+    color: #e1ebfa;
+  }
+  
+  .buttonHover:hover {
+    background-color: #d600d6;
+  }
+  
+  .listItem {
+    background-color: #2a2a2a;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .listItemHover:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 2rem;
+    color: #e1ebfa;
+  }
+  
+  .modalTitle {
+    color: #ff00fc;
+    margin-bottom: 1rem;
+  }
+  
+  .textField {
+    margin-bottom: 1rem;
+  }
+  
+  .textFieldLabel {
+    color: #e1ebfa !important;
+  }
+  
+  .textFieldInput {
+    color: #e1ebfa !important;
+    background-color: #3a3a3a;
+  }
