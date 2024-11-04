@@ -67,7 +67,7 @@ export default function Home() {
               textAlign: 'center', 
               color: 'white', 
               width: '100%',  // Increased width to avoid text being squished
-              maxWidth: '800px',  // Adjusted maxWidth for better responsiveness
+              maxWidth: '801px',  // Adjusted maxWidth for better responsiveness
               zIndex: 2, 
             }}
           >
