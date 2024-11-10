@@ -88,6 +88,14 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
       imageUrl: '/cars.webp',
       tweetId: '1818425259848339651'
     },
+    {
+      id: 8,
+      title: 'CyberCitizens have reached the final round for the Ronin Network Community Collection!',
+      content: 'CyberCitizens collection has reached the final round of the Ronin Network Community Collection! ',
+      datePublished: 'November 10, 2024',
+      imageUrl: '/headerbg.gif',
+      tweetId: '1852475793957408774'
+    },
   ];
 
   // Sort news items by datePublished in descending order (most recent first)
