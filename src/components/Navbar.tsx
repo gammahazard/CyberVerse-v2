@@ -74,7 +74,7 @@ export default function Navbar({ onRoadmapClick }: NavbarProps) {
       </Box>
 
       <Box display={{ xs: 'none', md: 'flex' }} alignItems="center">
-        <IconButton href="https://x.com/CyberVerse_io" target="_blank" rel="noopener noreferrer" size="large">
+        <IconButton href="https://x.com/CyberVerseGame" target="_blank" rel="noopener noreferrer" size="large">
           <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
         </IconButton>
         <IconButton href="https://discord.com/invite/cyberversegame" target="_blank" rel="noopener noreferrer" size="large">

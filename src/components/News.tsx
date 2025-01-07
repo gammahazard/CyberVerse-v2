@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import newsData from '@/data/news.json';
 
 // Define the type for news items
 interface NewsItem {
@@ -12,7 +13,7 @@ interface NewsItem {
   content: string;
   datePublished: string;
   imageUrl: string;
-  tweetId?: string; // Optional field for tweet ID
+  tweetId?: string;
 }
 
 const News = () => {
@@ -29,77 +30,10 @@ const News = () => {
     setOpenModal(false);
   };
 
-  const newsItems: NewsItem[] = [
-    {
-      id: 1,
-      title: 'CyberVerse Town Hall Announcement!',
-      content: 'Join @kilver_erg and @sisyphuspush for our community town hall on coming up on Sunday June 2nd!',
-      datePublished: 'May 31, 2024',
-      imageUrl: '/townhall.jpg',
-      tweetId: '1796294872074457352'
-    },
-    {
-      id: 2,
-      title: 'CyberVerse x House of Titans partnership announced!',
-      content: `We're excited to announce our partnership with House of Titans! 
-
-House of Titans is a digital collectibles project with a utility-driven, gamification-focused approach on the Cardano blockchain!`,
-      datePublished: 'May 31, 2024',
-      imageUrl: '/titan-cyberverse.png',
-      tweetId: '1794383208554877128', // ID of the tweet to embed
-    },
-    {
-      id: 3,
-      title: 'CyberVerse x Omen partnership announced!',
-      content: `In the coming weeks, we'll be bringing Omen into CyberVerse! Omen is a self-sustaining ecosystem on Cardano. http://nemonium.com/`,
-      datePublished: 'May 14, 2024',
-      imageUrl: '/omen-cyberverse.jpg',
-      tweetId: '1790505806783185370', // ID of the tweet to embed
-    },
-    {
-      id: 4,
-      title: 'Community market surpasses 5 million $CYPX trading volume!',
-      content: `Our community market has surpassed the 5,000,000 $CYPX in trading volume, which is equivalent to 6.2k Ergo at current CYPX price! Thanks to everyone for supporting CyberVerse, and let's keep the momentum going!`,
-      datePublished: 'May 22, 2024',
-      imageUrl: '/marketplace-volume.jpg',
-      tweetId: '1793301080761385145', // ID of the tweet to embed
-    },
-    {
-      id: 5,
-      title: 'Rising Player Counts',
-      content: 'Our daily average number of active players is showing an upward trend, we are now averaging between 60-70 active players online every day!',
-      datePublished: 'May 28, 2024',
-      imageUrl: '/player-count.jpg',
-      tweetId: '1795539702898163735'
-    },
-    {
-      id: 6,
-      title: 'CyberVerse Wiki Website Announced',
-      content: 'The CyberVerse Wiki now has its own website, found at cyberversewiki.com! special thanks to @lexim0n',
-      datePublished: 'May 28, 2024',
-      imageUrl: '/wiki.png',
-      tweetId: '1795414078510223496'
-    },
-    {
-      id: 7,
-      title: 'CyberCars coming to Cardano',
-      content: 'First CyberCar NFTs are coming to Cardano this august, stay tuned for more info!',
-      datePublished: 'July 30, 2024',
-      imageUrl: '/cars.webp',
-      tweetId: '1818425259848339651'
-    },
-    {
-      id: 8,
-      title: 'CyberCitizens have reached the final round for the Ronin Network Community Collection!',
-      content: 'CyberCitizens collection has reached the final round of the Ronin Network Community Collection! ',
-      datePublished: 'November 10, 2024',
-      imageUrl: '/headerbg.gif',
-      tweetId: '1852475793957408774'
-    },
-  ];
-
   // Sort news items by datePublished in descending order (most recent first)
-  const sortedNewsItems = newsItems.sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
+  const sortedNewsItems = newsData.newsItems.sort(
+    (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime()
+  );
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 3) % sortedNewsItems.length);
@@ -153,7 +87,9 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  height: '500px', // Fixed height for the cards
+                  height: '450px',
+                  backgroundColor: '#1A1B1F',
+                  color: '#E1EBFA',
                   borderRadius: '8px',
                   overflow: 'hidden',
                 }}
@@ -168,17 +104,50 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
                 <CardContent
                   style={{
                     flex: 1,
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    padding: '20px',
+                    height: '100%'
                   }}
                 >
-                  <Typography variant="h5" component="div" gutterBottom>
+                  <Typography 
+                    variant="h5" 
+                    component="div" 
+                    style={{
+                      fontWeight: 600,
+                      marginBottom: '16px',
+                      fontSize: '1.4rem',
+                      lineHeight: '1.3'
+                    }}
+                  >
                     {news.title}
                   </Typography>
-                  <Typography variant="body2" component="div">
+                  <Typography 
+                    variant="body1" 
+                    component="div"
+                    style={{
+                      flex: 1,
+                      fontSize: '1rem',
+                      lineHeight: '1.5',
+                      overflow: 'hidden',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 4,
+                      WebkitBoxOrient: 'vertical',
+                      textOverflow: 'ellipsis'
+                    }}
+                  >
                     {news.content}
                   </Typography>
-                  <Typography variant="caption" component="div" style={{ marginTop: '10px' }}>
+                  <Typography 
+                    variant="body2" 
+                    component="div" 
+                    style={{ 
+                      marginTop: 'auto',
+                      color: '#9BA4B5',
+                      fontSize: '0.9rem',
+                      fontWeight: 500
+                    }}
+                  >
                     {news.datePublished}
                   </Typography>
                 </CardContent>
@@ -197,8 +166,9 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            bgcolor: 'black',
-            border: '1px solid #000',
+            bgcolor: '#1A1B1F',
+            color: '#E1EBFA',
+            border: '1px solid #2A2B2F',
             boxShadow: 24,
             p: 4,
             borderRadius: '8px',
@@ -210,7 +180,15 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
         >
           {selectedNews && (
             <>
-              <Typography variant="h3" gutterBottom>
+              <Typography 
+                variant="h3" 
+                gutterBottom
+                style={{
+                  fontWeight: 600,
+                  fontSize: '2rem',
+                  marginBottom: '20px'
+                }}
+              >
                 {selectedNews.title}
               </Typography>
               <CardMedia
@@ -219,17 +197,46 @@ House of Titans is a digital collectibles project with a utility-driven, gamific
                 alt={selectedNews.title}
                 style={{ height: '300px', width: '100%', objectFit: 'cover', marginBottom: '20px' }}
               />
-              <Typography variant="body1" gutterBottom>
+              <Typography 
+                variant="body1" 
+                gutterBottom
+                style={{
+                  fontSize: '1.1rem',
+                  lineHeight: '1.6',
+                  marginBottom: '20px'
+                }}
+              >
                 {selectedNews.content}
               </Typography>
               {selectedNews.tweetId && (
                 <TwitterTweetEmbed tweetId={selectedNews.tweetId} />
               )}
-              <Typography variant="caption" display="block" gutterBottom>
+              <Typography 
+                variant="body2" 
+                style={{ 
+                  color: '#9BA4B5',
+                  fontSize: '0.9rem',
+                  fontWeight: 500,
+                  marginTop: '20px'
+                }}
+              >
                 {selectedNews.datePublished}
               </Typography>
               {selectedNews.tweetId && (
-                <Link href={`https://x.com/CyberVerse_io/status/${selectedNews.tweetId}`} target="_blank" rel="noopener" underline="hover">
+                <Link 
+                  href={`https://x.com/CyberVerse_io/status/${selectedNews.tweetId}`} 
+                  target="_blank" 
+                  rel="noopener" 
+                  style={{
+                    color: '#4A9EFF',
+                    textDecoration: 'none',
+                    marginTop: '10px',
+                    display: 'inline-block',
+                    '&:hover': {
+                      textDecoration: 'underline'
+                    }
+                  }}
+                >
                   View Tweet
                 </Link>
               )}
