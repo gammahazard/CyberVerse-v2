@@ -227,7 +227,7 @@ const News = () => {
                   href={`https://x.com/CyberVerse_io/status/${selectedNews.tweetId}`} 
                   target="_blank" 
                   rel="noopener" 
-                  style={{
+                  sx={{
                     color: '#4A9EFF',
                     textDecoration: 'none',
                     marginTop: '10px',
