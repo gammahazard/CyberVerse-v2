@@ -92,7 +92,7 @@ export default function Home() {
                 textShadow: '2px 2px 2px rgba(255,255,255,0.5)',
               }}
             >
-              Explore, play, earn and have fun on the Ergo and Cardano Blockchain!
+            A browser-based cyberpunk MMORPG for Web3 punks.
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Button
@@ -126,7 +126,7 @@ export default function Home() {
                   height: { xs: '50px', sm: '55px', md: '60px' }, // Adjusted height for buttons
                   outline: 'none',
                 }}
-                onClick={() => window.open('https://playcyberverse.com', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://discord.com/invite/cyberversegame', '_blank', 'noopener,noreferrer')}
               >
                 Join the community
               </Button>
