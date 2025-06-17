@@ -44,7 +44,7 @@ const SectionText = () => {
             marginBottom: '20px',
           }}
         >
-          CyberVerse is a free-to-play, pixel-based MMORPG currently available in beta on both the Ergo and Cardano blockchains. Players can explore Cyberia city, engage in a variety of mini-games, and earn CYPX.
+          CyberVerse is a free-to-play, play-to-earn MMORPG where players can explore, grind, craft, trade, and earn all inside a growing virtual world!
         </Typography>
         <Box display="flex" gap={2}>
             <Button 
